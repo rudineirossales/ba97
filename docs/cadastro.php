@@ -25,15 +25,15 @@
             $backbone = $dado["backbone"];
             $mes = $dado["mes"];
             $estacao = $dado["estacao"];
-            $mntfo = $dado["mntfo"];
+            
             $indicador = $dado["indicador"];
             $abertura = $dado["abertura"];
             $acionamento = $dado["acionamento"];
             $promessa = $dado["promessa"];
             $baixa = $dado["baixa"];
             $sla = $dado["sla"];
-            $cod = $dado["cod"];
-            $ma = $dado["ma"];
+            
+            
 
 
             
@@ -285,10 +285,7 @@ con_consulta.send(null);
                     <label for="exampleInputEmail1">Estação</label>
                     <input class="form-control" readonly id="exampleInputEmail1" name="estacao" id="estacao" value="<?php echo $estacao;?>" type="text" aria-describedby="emailHelp" >
                   </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Mnt FO</label>
-                    <input class="form-control" readonly id="exampleInputEmail1" name="mntfo" value="<?php echo $mntfo;?>" type="text" aria-describedby="emailHelp" >
-                  </div>
+                  
                   <div class="form-group">
                     <label for="exampleInputEmail1">Indicador</label>
                     <input class="form-control" readonly id="exampleInputEmail1" name="indicador" value="<?php echo $indicador;?>" type="text" aria-describedby="emailHelp" >
@@ -313,15 +310,7 @@ con_consulta.send(null);
                     <label for="exampleInputEmail1">Sla</label>
                     <input class="form-control" readonly value="<?php echo $sla;?>" name="sla" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" >
                   </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Cod</label>
-                    <input class="form-control" readonly id="exampleInputEmail1" name="cod" value="<?php echo $cod;?>" type="text" aria-describedby="emailHelp" >
-                  </div>
-
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Ma</label>
-                    <input class="form-control" readonly value="<?php echo $ma;?>" name="ma" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" >
-                  </div>
+                  
                   
                   <div class="form-group">
                     <label for="exampleSelect1">Nome N° cabo</label>

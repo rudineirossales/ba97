@@ -107,7 +107,7 @@
                     
                     <th>Mes</th>
                     <th>Estação</th>
-                    <th>MntFO</th>
+                    
                     <th>Indicador</th>
                     <th>Abertura</th>
                     <th>Promessa</th>
@@ -128,14 +128,14 @@ $data2 = $_POST['date2'];
 if ($_SESSION['acesso'] == 'ADM')
 {
 
-  $sql = mysql_query ("select * from cadastro where pendencia_35d = 'SIM' " );
+  $sql = mysql_query ("select * from cadastro where pendencia_35d = 'SIM' and validacao = 'OK' " );
 
 }
 
 
 else
 {
-    $sql = mysql_query ("select * from cadastro where pendencia_35d = 'SIM' and ma = '".$_SESSION['acesso']."' " );
+    $sql = mysql_query ("select * from cadastro where pendencia_35d = 'SIM'  and validacao = 'OK' " );
     
 }
  
@@ -160,7 +160,7 @@ $row = mysql_num_rows($sql);
                     
                     <td><?php echo $dado ["mes"];  ?></td>
                     <td><?php echo $dado ["estacao"];  ?></td>
-                    <td><?php echo $dado ["mntfo"];  ?></td>
+                    
                     <td><?php echo $dado ["indicador"];  ?></td>
                     <td><?php echo $dado ["abertura"];  ?></td>
                     <td><?php echo $dado ["promessa"];  ?></td>

@@ -105,6 +105,7 @@
                   <tr>
                     <th>Ba</th>
                     <th>Backbone</th>
+                    <th>Cos</th>
                     <th>Mes</th>
                     <th>Estação</th>
                     <th>MntFO</th>
@@ -135,7 +136,7 @@ $data2 = $_POST['date2'];
       {
 
       
-    $sql = mysql_query ("select * from base where cadastrado = 'N' and ma = '".$_SESSION['acesso']."' order by  baixa desc" );
+    $sql = mysql_query ("select * from base where cadastrado = 'N'  order by  cos " );
 
       }
     $row = mysql_num_rows($sql);
@@ -160,6 +161,7 @@ $data2 = $_POST['date2'];
                   <tr>
                     <td><a href='cadastro.php?ba=<?php echo $dado ["ba"] ?>' ><?php echo $dado ["ba"];  ?></a></td>
                     <td><?php echo $dado ["backbone"];  ?></td>
+                    <td><?php echo $dado ["cos"];  ?></td>
                     <td><?php echo $dado ["mes"];  ?></td>
                     <td><?php echo $dado ["estacao"];  ?></td>
                     <td><?php echo $dado ["mntfo"];  ?></td>

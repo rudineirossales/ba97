@@ -254,11 +254,11 @@ $data2 = $_POST['date2'];
 if ($_SESSION['acesso'] == 'ADM')
 {
 
-$sql = mysql_query ("select * from cadastro where data_cad   BETWEEN '$data' and '$data2' order by data_cad desc" );
+$sql = mysql_query ("select * from cadastro where data_cad   BETWEEN '$data' and '$data2' and validacao = 'OK' order by data_cad desc" );
 }
 else
 {
-    $sql = mysql_query ("select * from cadastro where data_cad   BETWEEN '$data' and '$data2' and ma = '".$_SESSION['acesso']."' order by data_cad desc" );
+    $sql = mysql_query ("select * from cadastro where data_cad   BETWEEN '$data' and '$data2'  and validacao = 'OK' order by data_cad desc" );
 
 }
 
