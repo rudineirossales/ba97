@@ -146,6 +146,7 @@ $n_jm =$_POST['n_jm'];
 $data_aber =$_POST['data_aber']; 
 $prev_reg =$_POST['prev_reg']; 
 $foto =$_POST['foto']; 
+$ocorrencia =$_POST['ocorrencia']; 
 
 
 
@@ -251,9 +252,9 @@ move_uploaded_file($_FILES['foto'] ['tmp_name'], $diretorio.$novo_nome3 )	;
  
 */
 
-$query = "insert into cadastro (ba,mes,estacao,indicador,abertura,promessa,acionamento,baixa,sla,nome_cabo,entre_local,tipo_utilizacao,causa_rompimento,sub_causa,usu_cabo,ba_comum,prazo,metro_cabo,lote_cabo,cod_sap,cgr,n_prot_bo,obs_nao_abertura_bo,remanejo_fibra,qtd_cx_usada,n_emenda_enpe,endereco_enpe,pendencia_35d,jm,n_jm,data_abert_jan,prev_regula,just_fora_prazo,ccto_cli,descricao,coord_cabo,coord_enpe,informe_pendencia,material_35d,croqui,foto,data_cad,ga,validacao)";
+$query = "insert into cadastro (ba,mes,estacao,indicador,abertura,promessa,acionamento,baixa,sla,nome_cabo,entre_local,tipo_utilizacao,causa_rompimento,sub_causa,usu_cabo,ba_comum,prazo,metro_cabo,lote_cabo,cod_sap,cgr,n_prot_bo,obs_nao_abertura_bo,remanejo_fibra,qtd_cx_usada,n_emenda_enpe,endereco_enpe,pendencia_35d,jm,n_jm,data_abert_jan,prev_regula,just_fora_prazo,ccto_cli,descricao,coord_cabo,coord_enpe,informe_pendencia,material_35d,croqui,foto,data_cad,ga,validacao,ocorrencia)";
 
-$query.= "values ('$ba','$mes','$estacao','$indicador','$abertura','$promessa','$acionamento','$baixa','$sla','$cabo','$entre_local','$tipo','$causa','$sub','$usou','$ba_causa','$prazo','$metro_cabo','$lote_cabo','$sap','$cgr','$prot_bo','$obs_bo','$remanejo','$qtd_cx','$n_enpe','$end_enpe','$pend_35d','$jm','$n_jm','$data_aber','$prev_reg','$justi','$cctos','$desc','$coord_cabo','$coord_enpe','$pendencia','$mat_35d','$novo_nome2','$novo_nome',NOW(),'".$_SESSION['id']."', 'P')";
+$query.= "values ('$ba','$mes','$estacao','$indicador','$abertura','$promessa','$acionamento','$baixa','$sla','$cabo','$entre_local','$tipo','$causa','$sub','$usou','$ba_causa','$prazo','$metro_cabo','$lote_cabo','$sap','$cgr','$prot_bo','$obs_bo','$remanejo','$qtd_cx','$n_enpe','$end_enpe','$pend_35d','$jm','$n_jm','$data_aber','$prev_reg','$justi','$cctos','$desc','$coord_cabo','$coord_enpe','$pendencia','$mat_35d','$novo_nome2','$novo_nome',NOW(),'".$_SESSION['id']."', 'P','$ocorrencia')";
 
 
 $query2 = "update base set cadastrado = 'S' where ba = '$ba'";

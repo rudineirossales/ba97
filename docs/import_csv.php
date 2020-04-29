@@ -78,8 +78,8 @@ function import($file)
 
    }
    echo "<pre> Upload de $contador arquivos<br></pre>";
-   echo "<pre> Arquivos duplicados $contador <br></pre>";
+   echo "<pre> Arquivos duplicados $contador2 <br></pre>";
 }
 }
 
-?>
+?> 

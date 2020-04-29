@@ -1,6 +1,7 @@
 
 <?php 
          include "conn.php"; 
+         include "grafico_contagem_atv.php"; 
       
          session_start();
 
@@ -101,53 +102,19 @@
     </aside>
     <main class="app-content">
       <div class="app-title">
-        <div>
-          <h1><i class="fa fa-dashboard"></i> Dashboard</h1>
-          <p>Relatório Gráfico BA97</p>
+      <div>
+          <h1><i class="fa fa-pie-chart"></i> Grpafico de atividades</h1>
+          <p></p>
         </div>
         <ul class="app-breadcrumb breadcrumb">
           <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
-          <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+          <li class="breadcrumb-item"><a href="#">charts</a></li>
         </ul>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-lg-3">
-          <div class="widget-small primary coloured-icon"><i class="icon fa fa-users fa-3x"></i>
-            <div class="info">
-              <h4>TESTE</h4>
-              <p><b>5</b></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="widget-small info coloured-icon"><i class="icon fa fa-thumbs-o-up fa-3x"></i>
-            <div class="info">
-              <h4>TESTE</h4>
-              <p><b>25</b></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="widget-small warning coloured-icon"><i class="icon fa fa-files-o fa-3x"></i>
-            <div class="info">
-              <h4>TESTE</h4>
-              <p><b>10</b></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div class="widget-small danger coloured-icon"><i class="icon fa fa-star fa-3x"></i>
-            <div class="info">
-              <h4>TESTE</h4>
-              <p><b>500</b></p>
-            </div>
-          </div>
-        </div>
       </div>
       <div class="row">
         <div class="col-md-6">
           <div class="tile">
-            <h3 class="tile-title">Em desenvolvimento</h3>
+            <h3 class="tile-title">EM DESENVOLVIMENTO</h3>
             <div class="embed-responsive embed-responsive-16by9">
               <canvas class="embed-responsive-item" id="lineChartDemo"></canvas>
             </div>
@@ -155,40 +122,48 @@
         </div>
         <div class="col-md-6">
           <div class="tile">
-            <h3 class="tile-title">Em desenvolvimento</h3>
+            <h3 class="tile-title">Atividade pendentes por GA</h3>
+            <div class="embed-responsive embed-responsive-16by9">
+              <canvas class="embed-responsive-item" id="barChartDemo"></canvas>
+            </div>
+          </div>
+        </div> 
+        <!--
+        <div class="col-md-6">
+          <div class="tile">
+            <h3 class="tile-title">Radar Chart</h3>
+            <div class="embed-responsive embed-responsive-16by9">
+              <canvas class="embed-responsive-item" id="radarChartDemo"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="tile">
+            <h3 class="tile-title">Polar Chart</h3>
+            <div class="embed-responsive embed-responsive-16by9">
+              <canvas class="embed-responsive-item" id="polarChartDemo"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="tile">
+            <h3 class="tile-title">Pie Chart</h3>
             <div class="embed-responsive embed-responsive-16by9">
               <canvas class="embed-responsive-item" id="pieChartDemo"></canvas>
             </div>
           </div>
         </div>
-      </div>
-      <div class="row">
         <div class="col-md-6">
           <div class="tile">
-            <h3 class="tile-title">Em desenvolvimento</h3>
+            <h3 class="tile-title">Doughnut Chart</h3>
             <div class="embed-responsive embed-responsive-16by9">
-              <canvas class="embed-responsive-item" id="lineChartDemo2"></canvas>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="tile">
-            <h3 class="tile-title">Em desenvolvimento</h3>
-            <div class="embed-responsive embed-responsive-16by9">
-              <canvas class="embed-responsive-item" id="pieChartDemo2"></canvas>
+              <canvas class="embed-responsive-item" id="doughnutChartDemo"></canvas>
             </div>
           </div>
         </div>
       </div>
-        <div class="col-md-6">
-          <div class="tile">
-            <h3 class="tile-title">Em desenvolvimento</h3>
-            <p>Em desenvolvimento</p>
-            <p>Em desenvolvimento</p>
-            <p>Em desenvolvimento </p>
-          </div>
-        </div>
-      </div>
+
+      -->
     </main>
     <!-- Essential javascripts for application to work-->
     <script src="js/jquery-3.2.1.min.js"></script>
@@ -201,50 +176,59 @@
     <script type="text/javascript" src="js/plugins/chart.js"></script>
     <script type="text/javascript">
       var data = {
-      	labels: ["GA1", "GA2", "GA3", "GA4", "GA5"],
+      	labels: ["FELIPE", "ALDINO", "JEFERSON", "CASSIANO", "JOSE", "PAULO", "WAGNER"],
       	datasets: [
+      		
       		{
-      			label: "Setembro",
-      			fillColor: "rgba(220,220,220,0.2)",
-      			strokeColor: "rgba(220,220,220,1)",
-      			pointColor: "rgba(220,220,220,1)",
-      			pointStrokeColor: "#fff",
-      			pointHighlightFill: "#fff",
-      			pointHighlightStroke: "rgba(220,220,220,1)",
-      			data: [65, 59, 80, 81, 56]
-      		},
-      		{
-      			label: "Agosto",
+      			label: "My Second dataset",
       			fillColor: "rgba(151,187,205,0.2)",
       			strokeColor: "rgba(151,187,205,1)",
       			pointColor: "rgba(151,187,205,1)",
       			pointStrokeColor: "#fff",
       			pointHighlightFill: "#fff",
       			pointHighlightStroke: "rgba(151,187,205,1)",
-      			data: [28, 48, 40, 19, 86]
+      			data: [<?php echo $felipe ?>, <?php echo $aldino ?>, <?php echo $jeferson ?>, <?php echo $cassiano ?>, <?php echo $jose ?>, <?php echo $paulo ?>,<?php echo $wagner ?>]
       		}
       	]
       };
       var pdata = [
       	{
       		value: 300,
-      		color: "#46BFBD",
-      		highlight: "#5AD3D1",
-      		label: "Complete"
+      		color:"#F7464A",
+      		highlight: "#FF5A5E",
+      		label: "Red"
       	},
       	{
       		value: 50,
-      		color:"#F7464A",
-      		highlight: "#FF5A5E",
-      		label: "In-Progress"
+      		color: "#46BFBD",
+      		highlight: "#5AD3D1",
+      		label: "Green"
+      	},
+      	{
+      		value: 100,
+      		color: "#FDB45C",
+      		highlight: "#FFC870",
+      		label: "Yellow"
       	}
       ]
       
       var ctxl = $("#lineChartDemo").get(0).getContext("2d");
       var lineChart = new Chart(ctxl).Line(data);
       
+      var ctxb = $("#barChartDemo").get(0).getContext("2d");
+      var barChart = new Chart(ctxb).Bar(data);
+      
+      var ctxr = $("#radarChartDemo").get(0).getContext("2d");
+      var radarChart = new Chart(ctxr).Radar(data);
+      
+      var ctxpo = $("#polarChartDemo").get(0).getContext("2d");
+      var polarChart = new Chart(ctxpo).PolarArea(pdata);
+      
       var ctxp = $("#pieChartDemo").get(0).getContext("2d");
       var pieChart = new Chart(ctxp).Pie(pdata);
+      
+      var ctxd = $("#doughnutChartDemo").get(0).getContext("2d");
+      var doughnutChart = new Chart(ctxd).Doughnut(pdata);
     </script>
     <!-- Google analytics script-->
     <script type="text/javascript">

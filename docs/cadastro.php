@@ -271,7 +271,7 @@ con_consulta.send(null);
                 <form method="post" enctype="multipart/form-data" action="enviar_cad.php ">
                   <div class="form-group">
                     <label for="exampleInputEmail1">Ba</label>
-                    <input class="form-control" id="exampleInputEmail1" readonly name="ba" id="ba" value="<?php echo $ba;?>" type="text" aria-describedby="emailHelp" >
+                    <input class="form-control" id="exampleInputEmail1" readonly required name="ba" id="ba" value="<?php echo $ba;?>" type="text" aria-describedby="emailHelp" >
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Backbone</label>
@@ -315,7 +315,7 @@ con_consulta.send(null);
                   <div class="form-group">
                     <label for="exampleSelect1">Nome N° cabo</label>
                    
-                    <input type="text" class="form-control" id="cabo" name="cabo" onblur="completar_campos();"  required>
+                    <input type="text" class="form-control" id="cabo" name="cabo" onblur="completar_campos();"  >
                     <img src="img/loading.gif" id="loading" style="display:none " />
                   </div>
                   <div id="principal" >
@@ -336,7 +336,7 @@ con_consulta.send(null);
                   <div class="form-group">
                     <label for="exampleSelect1">Causa rompimento</label>
                     <select class="form-control" id="exampleSelect1" name="causa">
-                    <option value="0" disabled="disabled" required >Escolha uma Causa</option>
+                    <option value="0" disabled="disabled"  >Escolha uma Causa</option>
 
                           <?php
 
@@ -354,7 +354,7 @@ con_consulta.send(null);
                   <div class="form-group">
                     <label for="exampleSelect1">Sub causa</label>
                     <select class="form-control" id="exampleSelect1" name="sub">
-                    <option value="0" disabled="disabled" required>Escolha uma subcausa</option>
+                    <option value="0" disabled="disabled" >Escolha uma subcausa</option>
                     </select>
                   </div>
 
@@ -371,22 +371,22 @@ con_consulta.send(null);
                   
                   <div class="form-group">
                     <label for="exampleTextarea">Justificativa do fora prazo</label>
-                    <textarea class="form-control" maxlength="500" id="exampleTextarea" rows="3" name="justi"></textarea>
+                    <textarea class="form-control" maxlength="500" id="exampleTextarea"  rows="3" name="justi"></textarea>
                   </div>
                   <div class="form-group">
                     <label for="exampleTextarea">Cctto e cli envolvidos</label>
-                    <textarea class="form-control" maxlength="500" id="exampleTextarea" rows="3" name="cctos"></textarea>
+                    <textarea class="form-control" maxlength="500" id="exampleTextarea"  rows="3" name="cctos"></textarea>
                   </div>
                   <div class="form-group">
                     <label for="exampleTextarea">Descrição ocorrido</label>
-                    <textarea class="form-control" maxlength="500" id="exampleTextarea" rows="3" name="desc"></textarea>
+                    <textarea class="form-control" maxlength="500"  id="exampleTextarea" rows="3" name="desc"></textarea>
                   </div>
                   
                   
 
                   <div class="form-group">
                     <label for="exampleInputFile">Croqui</label>
-                    <input class="form-control-file" id="exampleInputFile" name="croqui" type="file" aria-describedby="fileHelp"><small  class="form-text text-muted" id="fileHelp">Tamanho máximo permitido 1 MB</small>
+                    <input class="form-control-file"  id="exampleInputFile" name="croqui" type="file" aria-describedby="fileHelp"><small  class="form-text text-muted" id="fileHelp">Tamanho máximo permitido 1 MB</small>
                   </div>
                
               </div>
@@ -395,20 +395,20 @@ con_consulta.send(null);
                   <div class="form-group">
                     <div class="form-group">
                       <label for="exampleInputEmail1">Ba causa comum</label>
-                      <input class="form-control"  id="exampleInputEmail1" maxlength="11" type="text" name="ba_causa" aria-describedby="emailHelp" >
+                      <input class="form-control"  id="exampleInputEmail1"  maxlength="11" type="text" name="ba_causa" aria-describedby="emailHelp" >
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Prazo</label>
-                    <input class="form-control"  id="exampleInputEmail1" maxlength="45" type="text" name="prazo" aria-describedby="emailHelp" >
+                    <input class="form-control"  id="exampleInputEmail1"  maxlength="45" type="text" name="prazo" aria-describedby="emailHelp" >
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Metro cabo utilizado</label>
-                    <input class="form-control"  id="exampleInputEmail1" maxlength="45" type="text" name="metro_cabo" aria-describedby="emailHelp" >
+                    <input class="form-control"  id="exampleInputEmail1"  maxlength="45" type="text" name="metro_cabo" aria-describedby="emailHelp" >
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Lote do cabo</label>
-                    <input class="form-control"  id="exampleInputEmail1" maxlength="45" type="text" name="lote_cabo" aria-describedby="emailHelp" >
+                    <input class="form-control"  id="exampleInputEmail1"  maxlength="45" type="text" name="lote_cabo" aria-describedby="emailHelp" >
                   </div>
                   <div class="form-group">
                     <label for="exampleSelect1">Cod sap cabo</label>
@@ -428,41 +428,50 @@ con_consulta.send(null);
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Tempo CGR/ENC</label>
-                    <input class="form-control"  maxlength="45" id="exampleInputEmail1" type="text" name="cgr" aria-describedby="emailHelp" >
+                    <input class="form-control"   maxlength="45" id="exampleInputEmail1" type="text" name="cgr" aria-describedby="emailHelp" >
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputEmail1">N° prot BO</label>
-                    <input class="form-control"  maxlength="45" id="exampleInputEmail1" type="text" name="prot_bo" aria-describedby="emailHelp" >
+                    <label for="exampleSelect1">Ocorrencia</label>
+                    <select class="form-control" id="exampleSelect1" name="ocorrencia">
+                      <option value="BO">BO</option>
+                      <option value="RO">RO</option>
+                      <option value="GAD">GAD</option>
+                      
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">N° Ocorrencia</label>
+                    <input class="form-control"   maxlength="45" id="exampleInputEmail1" type="text" name="prot_bo" aria-describedby="emailHelp" >
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">OBS não abert. BO</label>
                     
-                    <textarea class="form-control"  maxlength="500" id="exampleTextarea"  rows="3" name="obs_bo"></textarea>
+                    <textarea class="form-control"  maxlength="500"  id="exampleTextarea"  rows="3" name="obs_bo"></textarea>
                   
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Remanejo de fibra de</label>
-                    <input class="form-control"  maxlength="45" id="exampleInputEmail1" type="text" name="remanejo" aria-describedby="emailHelp" >
+                    <input class="form-control"  maxlength="45"  id="exampleInputEmail1" type="text" name="remanejo" aria-describedby="emailHelp" >
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Qtd. caixa usada</label>
-                    <input class="form-control"  maxlength="45" id="exampleInputEmail1" type="text" name="qtd_cx" aria-describedby="emailHelp" >
+                    <input class="form-control"   maxlength="45" id="exampleInputEmail1" type="text" name="qtd_cx" aria-describedby="emailHelp" >
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Número emenda ENPE</label>
-                    <input class="form-control"  maxlength="45" id="exampleInputEmail1" type="text" name="n_enpe" aria-describedby="emailHelp" >
+                    <input class="form-control"   maxlength="45" id="exampleInputEmail1" type="text" name="n_enpe" aria-describedby="emailHelp" >
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Endereço ENPE/CABO</label>
-                    <input class="form-control" maxlength="45"  id="exampleInputEmail1" type="text" name="end_enpe" aria-describedby="emailHelp" >
+                    <input class="form-control"  maxlength="45"  id="exampleInputEmail1" type="text" name="end_enpe" aria-describedby="emailHelp" >
                   </div>
                   <div class="form-group">
                     <label for="exampleTextarea">Coordenadas cabo</label>
-                    <textarea class="form-control" maxlength="45" id="exampleTextarea" name="coord_cabo" rows="3"></textarea>
+                    <textarea class="form-control"  maxlength="45" id="exampleTextarea" name="coord_cabo" rows="3"></textarea>
                   </div>
                   <div class="form-group">
                     <label for="exampleTextarea">Coordenadas ENPE</label>
-                    <textarea class="form-control" maxlength="45" id="exampleTextarea" name="coord_enpe" rows="3"></textarea>
+                    <textarea class="form-control"  maxlength="45" id="exampleTextarea" name="coord_enpe" rows="3"></textarea>
                   </div>
                   <div class="form-group">
                     <label for="exampleTextarea">Informe pendencia</label>
@@ -611,7 +620,7 @@ autoclose: true,
 
                   <div class="form-group">
                     <label for="exampleInputFile">Foto Rompimento</label>
-                    <input class="form-control-file" id="foto" name="foto" type="file" aria-describedby="fileHelp"><small class="form-text text-muted" id="fileHelp">Tamanho máximo permitido 1 MB</small>
+                    <input class="form-control-file"  id="foto" name="foto" type="file" aria-describedby="fileHelp"><small class="form-text text-muted" id="fileHelp">Tamanho máximo permitido 1 MB</small>
                   </div>
                   
                     </div>
