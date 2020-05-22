@@ -12,7 +12,7 @@
 
             $ba =$_GET['ba'];
 
-            $sql = mysql_query ("select * from base where ba = '$ba'" );
+            $sql = mysql_query ("select * from cadastro where ba = '$ba'" );
 
             $row = mysql_num_rows($sql);
 
@@ -32,6 +32,36 @@
             $promessa = $dado["promessa"];
             $baixa = $dado["baixa"];
             $sla = $dado["sla"];
+            $tipo_utilizacao = $dado["tipo_utilizacao"];
+            $causa_rompimento = $dado["causa_rompimento"];
+            $sub_causa = $dado["sub_causa"];
+            $usu_cabo = $dado["usu_cabo"];
+            $ba_comum = $dado["ba_comum"];
+            $prazo = $dado["prazo"];
+            $metro_cabo = $dado["metro_cabo"];
+            $lote_cabo = $dado["lote_cabo"];
+            $cod_sap = $dado["cod_sap"];
+            $cgr = $dado["cgr"];
+            $n_prot_bo = $dado["n_prot_bo"];
+            $obs_nao_abertura_bo = $dado["obs_nao_abertura_bo"];
+            $remanejo_fibra = $dado["remanejo_fibra"];
+            $qtd_cx_usada = $dado["qtd_cx_usada"];
+            $n_emenda_enpe = $dado["n_emenda_enpe"];
+            $endereco_enpe = $dado["endereco_enpe"];
+            $pendencia_35d = $dado["pendencia_35d"];
+            $jm = $dado["jm"];
+            $n_jm = $dado["n_jm"];
+            $data_abert_jan = $dado["data_abert_jan"];
+            $prev_regula = $dado["prev_regula"];
+            $just_fora_prazo = $dado["just_fora_prazo"];
+            $ccto_cli = $dado["ccto_cli"];
+            $descricao = $dado["descricao"];
+            $coord_cabo = $dado["coord_cabo"];
+            $coord_enpe = $dado["coord_enpe"];
+            $informe_pendencia = $dado["informe_pendencia"];
+            $material_35d = $dado["material_35d"];
+            $material_35d = $dado["material_35d"];
+
             
             
 
@@ -273,10 +303,7 @@ con_consulta.send(null);
                     <label for="exampleInputEmail1">Ba</label>
                     <input class="form-control" id="exampleInputEmail1" readonly name="ba" id="ba" value="<?php echo $ba;?>" type="text" aria-describedby="emailHelp" >
                   </div>
-                  <div class="form-group">
-                    <label for="exampleInputEmail1">Backbone</label>
-                    <input class="form-control" readonly id="exampleInputEmail1" name="back" value="<?php echo $backbone;?>" type="text" aria-describedby="emailHelp" >
-                  </div>
+                  
                   <div class="form-group">
                     <label for="exampleInputEmail1">Mês</label>
                     <input class="form-control" readonly id="exampleInputEmail1" name="mes" id="mes" value="<?php echo $mes;?>" type="text" aria-describedby="emailHelp" >
@@ -311,7 +338,7 @@ con_consulta.send(null);
                     <input class="form-control" readonly value="<?php echo $sla;?>" name="sla" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" >
                   </div>
                   
-                  
+                  <!--
                   <div class="form-group">
                     <label for="exampleSelect1">Nome N° cabo</label>
                    
@@ -319,7 +346,7 @@ con_consulta.send(null);
                     <img src="img/loading.gif" id="loading" style="display:none " />
                   </div>
                   <div id="principal" >
-                  </div>
+                  </div>  -->
 
                   
                   
@@ -327,6 +354,7 @@ con_consulta.send(null);
                   <div class="form-group">
                     <label for="exampleSelect1">Tipo utilização</label>
                     <select class="form-control" id="exampleSelect1" name="tipo">
+                          <option value="<?php echo $tipo_utilizacao;?>" ><?php echo $tipo_utilizacao;?></option>
                           <option value="Aereo"  >Aereo</option>
                           <option value="Diretamente Enterrado"  >Diretamente Enterrado</option>
                           <option value="Canalizado"  >Canalizado</option>
@@ -336,7 +364,7 @@ con_consulta.send(null);
                   <div class="form-group">
                     <label for="exampleSelect1">Causa rompimento</label>
                     <select class="form-control" id="exampleSelect1" name="causa">
-                    <option value="0" disabled="disabled" required >Escolha uma Causa</option>
+                    <option value="<?php echo $causa_rompimento;?>" ><?php echo $causa_rompimento;?></option>
 
                           <?php
 
@@ -354,13 +382,14 @@ con_consulta.send(null);
                   <div class="form-group">
                     <label for="exampleSelect1">Sub causa</label>
                     <select class="form-control" id="exampleSelect1" name="sub">
-                    <option value="0" disabled="disabled" required>Escolha uma subcausa</option>
+                    <option value="<?php echo $sub_causa;?>" ><?php echo $sub_causa;?></option>
                     </select>
                   </div>
 
                   <div class="form-group">
                     <label for="exampleSelect1">Usou cabo?</label>
                     <select class="form-control" id="exampleSelect1" name="usou">
+                      <option value="<?php echo $usu_cabo;?>" ><?php echo $usu_cabo;?></option>
                       <option>SIM</option>
                       <option>NAO</option>
                       
@@ -371,22 +400,22 @@ con_consulta.send(null);
                   
                   <div class="form-group">
                     <label for="exampleTextarea">Justificativa do fora prazo</label>
-                    <textarea class="form-control" maxlength="500" id="exampleTextarea" rows="3" name="justi"></textarea>
+                    <textarea class="form-control" maxlength="500" id="exampleTextarea" rows="3" name="justi"><?php echo $just_fora_prazo;?></textarea>
                   </div>
                   <div class="form-group">
                     <label for="exampleTextarea">Cctto e cli envolvidos</label>
-                    <textarea class="form-control" maxlength="500" id="exampleTextarea" rows="3" name="cctos"></textarea>
+                    <textarea class="form-control" maxlength="500" id="exampleTextarea" rows="3" name="cctos"><?php echo $ccto_cli;?></textarea>
                   </div>
                   <div class="form-group">
                     <label for="exampleTextarea">Descrição ocorrido</label>
-                    <textarea class="form-control" maxlength="500" id="exampleTextarea" rows="3" name="desc"></textarea>
+                    <textarea class="form-control" maxlength="500" id="exampleTextarea" rows="3" name="desc"><?php echo $descricao;?></textarea>
                   </div>
                   
                   
 
                   <div class="form-group">
                     <label for="exampleInputFile">Croqui</label>
-                    <input class="form-control-file" id="exampleInputFile" name="croqui" type="file" aria-describedby="fileHelp"><small  class="form-text text-muted" id="fileHelp">Tamanho máximo permitido 1 MB</small>
+                    <input class="form-control-file"  id="exampleInputFile" name="croqui" type="file" aria-describedby="fileHelp"><small  class="form-text text-muted" id="fileHelp">Tamanho máximo permitido 1 MB</small>
                   </div>
                
               </div>
@@ -395,24 +424,25 @@ con_consulta.send(null);
                   <div class="form-group">
                     <div class="form-group">
                       <label for="exampleInputEmail1">Ba causa comum</label>
-                      <input class="form-control"  id="exampleInputEmail1" maxlength="11" type="text" name="ba_causa" aria-describedby="emailHelp" >
+                      <input class="form-control"  value="<?php echo $ba_comum;?>" id="exampleInputEmail1" maxlength="11" type="text" name="ba_causa" aria-describedby="emailHelp" >
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Prazo</label>
-                    <input class="form-control"  id="exampleInputEmail1" maxlength="45" type="text" name="prazo" aria-describedby="emailHelp" >
+                    <input class="form-control"  value="<?php echo $prazo;?>" id="exampleInputEmail1" maxlength="45" type="text" name="prazo" aria-describedby="emailHelp" >
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Metro cabo utilizado</label>
-                    <input class="form-control"  id="exampleInputEmail1" maxlength="45" type="text" name="metro_cabo" aria-describedby="emailHelp" >
+                    <input class="form-control"  id="exampleInputEmail1" value="<?php echo $metro_cabo;?>" maxlength="45" type="text" name="metro_cabo" aria-describedby="emailHelp" >
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Lote do cabo</label>
-                    <input class="form-control"  id="exampleInputEmail1" maxlength="45" type="text" name="lote_cabo" aria-describedby="emailHelp" >
+                    <input class="form-control"  id="exampleInputEmail1" value="<?php echo $lote_cabo;?>" maxlength="45" type="text" name="lote_cabo" aria-describedby="emailHelp" >
                   </div>
                   <div class="form-group">
                     <label for="exampleSelect1">Cod sap cabo</label>
                     <select class="form-control" id="exampleSelect1" name="sap">
+                    <option value="<?php echo $cod_sap;?>" ><?php echo $cod_sap;?></option>
                     <?php
 
                             
@@ -428,54 +458,55 @@ con_consulta.send(null);
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Tempo CGR/ENC</label>
-                    <input class="form-control"  maxlength="45" id="exampleInputEmail1" type="text" name="cgr" aria-describedby="emailHelp" >
+                    <input class="form-control"  maxlength="45"  value="<?php echo $cgr;?>" id="exampleInputEmail1" type="text" name="cgr" aria-describedby="emailHelp" >
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">N° prot BO</label>
-                    <input class="form-control"  maxlength="45" id="exampleInputEmail1" type="text" name="prot_bo" aria-describedby="emailHelp" >
+                    <input class="form-control"  maxlength="45" id="exampleInputEmail1" value="<?php echo $n_prot_bo;?>" type="text" name="prot_bo" aria-describedby="emailHelp" >
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">OBS não abert. BO</label>
                     
-                    <textarea class="form-control"  maxlength="500" id="exampleTextarea"  rows="3" name="obs_bo"></textarea>
+                    <textarea class="form-control"  maxlength="500" id="exampleTextarea"  rows="3" name="obs_bo"><?php echo $obs_nao_abertura_bo;?></textarea>
                   
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Remanejo de fibra de</label>
-                    <input class="form-control"  maxlength="45" id="exampleInputEmail1" type="text" name="remanejo" aria-describedby="emailHelp" >
+                    <input class="form-control"  maxlength="45" id="exampleInputEmail1" value="<?php echo $remanejo_fibra;?>" type="text" name="remanejo" aria-describedby="emailHelp" >
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Qtd. caixa usada</label>
-                    <input class="form-control"  maxlength="45" id="exampleInputEmail1" type="text" name="qtd_cx" aria-describedby="emailHelp" >
+                    <input class="form-control"  maxlength="45" value="<?php echo $qtd_cx_usada;?>"   id="exampleInputEmail1" type="text" name="qtd_cx" aria-describedby="emailHelp" >
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Número emenda ENPE</label>
-                    <input class="form-control"  maxlength="45" id="exampleInputEmail1" type="text" name="n_enpe" aria-describedby="emailHelp" >
+                    <input class="form-control"  maxlength="45" value="<?php echo $n_emenda_enpe;?>" id="exampleInputEmail1" type="text" name="n_enpe" aria-describedby="emailHelp" >
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Endereço ENPE/CABO</label>
-                    <input class="form-control" maxlength="45"  id="exampleInputEmail1" type="text" name="end_enpe" aria-describedby="emailHelp" >
+                    <input class="form-control" maxlength="45"  value="<?php echo $endereco_enpe;?>" id="exampleInputEmail1" type="text" name="end_enpe" aria-describedby="emailHelp" >
                   </div>
                   <div class="form-group">
                     <label for="exampleTextarea">Coordenadas cabo</label>
-                    <textarea class="form-control" maxlength="45" id="exampleTextarea" name="coord_cabo" rows="3"></textarea>
+                    <textarea class="form-control" maxlength="45" id="exampleTextarea" name="coord_cabo" rows="3"><?php echo $coord_cabo;?></textarea>
                   </div>
                   <div class="form-group">
                     <label for="exampleTextarea">Coordenadas ENPE</label>
-                    <textarea class="form-control" maxlength="45" id="exampleTextarea" name="coord_enpe" rows="3"></textarea>
+                    <textarea class="form-control" maxlength="45" id="exampleTextarea" name="coord_enpe" rows="3"><?php echo $coord_enpe;?></textarea>
                   </div>
                   <div class="form-group">
                     <label for="exampleTextarea">Informe pendencia</label>
-                    <textarea class="form-control" maxlength="500" id="exampleTextarea" name="pendencia" rows="3"></textarea>
+                    <textarea class="form-control" maxlength="500" id="exampleTextarea" name="pendencia" rows="3"><?php echo $informe_pendencia;?></textarea>
                   </div>
                   <div class="form-group">
                     <label for="exampleTextarea">Material pendência 35d</label>
-                    <textarea class="form-control" maxlength="45" id="exampleTextarea" name="mat_35d" rows="3"></textarea>
+                    <textarea class="form-control" maxlength="45" id="exampleTextarea" name="mat_35d" rows="3"><?php echo $material_35d;?></textarea>
                   </div>
 
                   <div class="form-group">
                     <label for="exampleSelect1">Há pendencia 35d?</label>
                     <select class="form-control" id="exampleSelect1" name="pend_35d">
+                      <option value="<?php echo $pendencia_35d;?>" ><?php echo $pendencia_35d;?></option>
                       <option>SIM</option>
                       <option>NÃO</option>
                       
@@ -484,6 +515,7 @@ con_consulta.send(null);
                   <div class="form-group">
                     <label for="exampleSelect1">Necessário JM?</label>
                     <select class="form-control" id="exampleSelect1" name="jm">
+                      <option value="<?php echo $jm;?>" ><?php echo $jm;?></option>
                       <option>SIM</option>
                       <option>NÃO</option>
                       
@@ -491,7 +523,7 @@ con_consulta.send(null);
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Número JM</label>
-                    <input class="form-control"  maxlength="45" id="exampleInputEmail1" type="text" name="n_jm" aria-describedby="emailHelp" >
+                    <input class="form-control"  maxlength="45" value="<?php echo $n_jm;?>" id="exampleInputEmail1" type="text" name="n_jm" aria-describedby="emailHelp" >
                   </div>
                   <div class="form-group">
                     <label for="exampleInputEmail1">Data abertura Janela</label>
@@ -517,7 +549,7 @@ con_consulta.send(null);
                                           <i class="fa fa-calendar">
                                           </i>
                                         </div>
-                                        <input class="form-control" id="data_aber" name="data_aber" autocomplete="off" placeholder="DD/MM/AAAA" type="text" />
+                                        <input class="form-control" id="data_aber" value="<?php echo $data_abert_jan;?>" name="data_aber" autocomplete="off" placeholder="DD/MM/AAAA" type="text" />
                                       </div>
                                     </div>
                                   </div>
@@ -575,7 +607,7 @@ con_consulta.send(null);
             <i class="fa fa-calendar">
             </i>
           </div>
-          <input class="form-control" id="prev_regr" name="prev_reg" autocomplete="off" placeholder="DD/MM/AAAA" type="text" />
+          <input class="form-control" id="prev_regr" name="prev_reg" value="<?php echo $prev_regula;?>" autocomplete="off" placeholder="DD/MM/AAAA" type="text" />
         </div>
       </div>
     </div>
@@ -611,7 +643,7 @@ autoclose: true,
 
                   <div class="form-group">
                     <label for="exampleInputFile">Foto Rompimento</label>
-                    <input class="form-control-file" id="foto" name="foto" type="file" aria-describedby="fileHelp"><small class="form-text text-muted" id="fileHelp">Tamanho máximo permitido 1 MB</small>
+                    <input class="form-control-file" id="foto"  name="foto" type="file" aria-describedby="fileHelp"><small class="form-text text-muted" id="fileHelp">Tamanho máximo permitido 1 MB</small>
                   </div>
                   
                     </div>

@@ -386,7 +386,7 @@ con_consulta.send(null);
 
                   <div class="form-group">
                     <label for="exampleInputFile">Croqui</label>
-                    <input class="form-control-file"  id="exampleInputFile" name="croqui" type="file" aria-describedby="fileHelp"><small  class="form-text text-muted" id="fileHelp">Tamanho máximo permitido 1 MB</small>
+                    <input class="form-control-file"  required id="exampleInputFile" name="croqui" type="file" aria-describedby="fileHelp"><small  class="form-text text-muted" id="fileHelp">Tamanho máximo permitido 1 MB</small>
                   </div>
                
               </div>
@@ -620,7 +620,7 @@ autoclose: true,
 
                   <div class="form-group">
                     <label for="exampleInputFile">Foto Rompimento</label>
-                    <input class="form-control-file"  id="foto" name="foto" type="file" aria-describedby="fileHelp"><small class="form-text text-muted" id="fileHelp">Tamanho máximo permitido 1 MB</small>
+                    <input class="form-control-file"  required id="foto" name="foto" type="file" aria-describedby="fileHelp"><small class="form-text text-muted" id="fileHelp">Tamanho máximo permitido 1 MB</small>
                   </div>
                   
                     </div>

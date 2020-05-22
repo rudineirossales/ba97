@@ -36,8 +36,28 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
   <body class="app sidebar-mini rtl">
+
+
+  <?php    
+  
+  $sql = mysql_query ("select * from cadastro where validacao = 'R' and ga = '".$_SESSION['id']."'");
+  
+  if (mysql_num_rows($sql) > 0)
+    { //
+  ?>    
+    <script>
+    swal("Você tem atividades rejeitas. \n VERIFIQUE em \n Validação >> Rejeitadas");
+    </script>
+  <?php 
+    }
+  ?>
+
+    
+  
+  
     <!-- Navbar-->
     <header class="app-header"><a class="app-header__logo" href="dashboard.php">Serede</a>
       <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
@@ -101,10 +121,10 @@
             
     </aside>
     <main class="app-content">
-      <div class="app-title">
-      <div>
-          <h1><i class="fa fa-pie-chart"></i> Grpafico de atividades</h1>
-          <p></p>
+    <div class="app-title">
+        <div>
+          <h1><i class="fa fa-pie-chart"></i> Charts</h1>
+          <p>Various type of charts for your project</p>
         </div>
         <ul class="app-breadcrumb breadcrumb">
           <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
@@ -112,58 +132,27 @@
         </ul>
       </div>
       <div class="row">
+        
         <div class="col-md-6">
           <div class="tile">
-            <h3 class="tile-title">EM DESENVOLVIMENTO</h3>
-            <div class="embed-responsive embed-responsive-16by9">
-              <canvas class="embed-responsive-item" id="lineChartDemo"></canvas>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="tile">
-            <h3 class="tile-title">Atividade pendentes por GA</h3>
+            <h3 class="tile-title">Atividade Total / Cadastradas <?php echo date("Y"); ?></h3>
+           
             <div class="embed-responsive embed-responsive-16by9">
               <canvas class="embed-responsive-item" id="barChartDemo"></canvas>
             </div>
           </div>
-        </div> 
-        <!--
-        <div class="col-md-6">
-          <div class="tile">
-            <h3 class="tile-title">Radar Chart</h3>
-            <div class="embed-responsive embed-responsive-16by9">
-              <canvas class="embed-responsive-item" id="radarChartDemo"></canvas>
-            </div>
-          </div>
         </div>
         <div class="col-md-6">
           <div class="tile">
-            <h3 class="tile-title">Polar Chart</h3>
+            <h3 class="tile-title">Pendencia GAD's </h3>
             <div class="embed-responsive embed-responsive-16by9">
-              <canvas class="embed-responsive-item" id="polarChartDemo"></canvas>
+              <canvas class="embed-responsive-item" id="barChartDemo2"></canvas>
             </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="tile">
-            <h3 class="tile-title">Pie Chart</h3>
-            <div class="embed-responsive embed-responsive-16by9">
-              <canvas class="embed-responsive-item" id="pieChartDemo"></canvas>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="tile">
-            <h3 class="tile-title">Doughnut Chart</h3>
-            <div class="embed-responsive embed-responsive-16by9">
-              <canvas class="embed-responsive-item" id="doughnutChartDemo"></canvas>
-            </div>
-          </div>
+        
         </div>
       </div>
-
-      -->
     </main>
     <!-- Essential javascripts for application to work-->
     <script src="js/jquery-3.2.1.min.js"></script>
@@ -176,20 +165,45 @@
     <script type="text/javascript" src="js/plugins/chart.js"></script>
     <script type="text/javascript">
       var data = {
-      	labels: ["FELIPE", "ALDINO", "JEFERSON", "CASSIANO", "JOSE", "PAULO", "WAGNER"],
+      	labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"],
       	datasets: [
-      		
+      		{
+      			label: "My First dataset",
+      			fillColor: "rgba(46,139,87)",
+      			strokeColor: "rgba(220,220,220,1)",
+      			pointColor: "rgba(220,220,220,1)",
+      			pointStrokeColor: "#fff",
+      			pointHighlightFill: "#fff",
+      			pointHighlightStroke: "rgba(220,220,220,1)",
+      			data: [<?php echo $jan_tot ?>, <?php echo $fev_tot ?>, <?php echo $marco_tot ?>, <?php echo $abril_tot ?>, <?php echo $maio_tot ?>,<?php echo $jun_tot ?>,<?php echo $jul_tot ?>,<?php echo $agos_tot ?>,<?php echo $sete_tot ?>,<?php echo $outu_tot ?>,<?php echo $nov_tot ?>,<?php echo $dez_tot ?>]
+      		},
       		{
       			label: "My Second dataset",
-      			fillColor: "rgba(151,187,205,0.2)",
+      			fillColor: "rgba(210,105,30)",
       			strokeColor: "rgba(151,187,205,1)",
       			pointColor: "rgba(151,187,205,1)",
       			pointStrokeColor: "#fff",
       			pointHighlightFill: "#fff",
       			pointHighlightStroke: "rgba(151,187,205,1)",
-      			data: [<?php echo $felipe ?>, <?php echo $aldino ?>, <?php echo $jeferson ?>, <?php echo $cassiano ?>, <?php echo $jose ?>, <?php echo $paulo ?>,<?php echo $wagner ?>]
+      			data: [<?php echo $jan_cad ?>, <?php echo $fev_cad ?>, <?php echo $marco_cad ?>, <?php echo $abril_cad ?>, <?php echo $maio_cad ?>,<?php echo $jun_cad ?>,<?php echo $jul_cad ?>,<?php echo $agos_cad ?>,<?php echo $sete_cad ?>,<?php echo $outu_cad ?>,<?php echo $nov_cad ?>,<?php echo $dez_cad ?>]
       		}
       	]
+      };
+      var data2 = {
+        labels: ["FELIPE", "ALDINO", "JEFERSON", "CASSIANO", "JOSE", "PAULO", "WAGNER"],
+        datasets: [
+          
+          {
+            label: "My Second dataset",
+            fillColor: "rgba(46,139,87)",
+            strokeColor: "rgba(151,187,205,1)",
+            pointColor: "rgba(151,187,205,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(151,187,205,1)",
+            data: [<?php echo $felipe ?>, <?php echo $aldino ?>, <?php echo $jeferson ?>, <?php echo $cassiano ?>, <?php echo $jose ?>, <?php echo $paulo ?>,<?php echo $wagner ?>]
+          }
+        ]
       };
       var pdata = [
       	{
@@ -212,23 +226,15 @@
       	}
       ]
       
-      var ctxl = $("#lineChartDemo").get(0).getContext("2d");
-      var lineChart = new Chart(ctxl).Line(data);
+      
       
       var ctxb = $("#barChartDemo").get(0).getContext("2d");
       var barChart = new Chart(ctxb).Bar(data);
+
+      var ctxb2 = $("#barChartDemo2").get(0).getContext("2d");
+      var barChart = new Chart(ctxb2).Bar(data2);
       
-      var ctxr = $("#radarChartDemo").get(0).getContext("2d");
-      var radarChart = new Chart(ctxr).Radar(data);
-      
-      var ctxpo = $("#polarChartDemo").get(0).getContext("2d");
-      var polarChart = new Chart(ctxpo).PolarArea(pdata);
-      
-      var ctxp = $("#pieChartDemo").get(0).getContext("2d");
-      var pieChart = new Chart(ctxp).Pie(pdata);
-      
-      var ctxd = $("#doughnutChartDemo").get(0).getContext("2d");
-      var doughnutChart = new Chart(ctxd).Doughnut(pdata);
+     
     </script>
     <!-- Google analytics script-->
     <script type="text/javascript">
@@ -241,55 +247,7 @@
       	ga('send', 'pageview');
       }
     </script>
-
-<script type="text/javascript">
-  var data = {
-    labels: ["January", "February", "March", "April", "May"],
-    datasets: [
-      {
-        label: "My First dataset",
-        fillColor: "rgba(220,220,220,0.2)",
-        strokeColor: "rgba(220,220,220,1)",
-        pointColor: "rgba(220,220,220,1)",
-        pointStrokeColor: "#fff",
-        pointHighlightFill: "#fff",
-        pointHighlightStroke: "rgba(220,220,220,1)",
-        data: [65, 59, 80, 81, 56]
-      },
-      {
-        label: "My Second dataset",
-        fillColor: "rgba(151,187,205,0.2)",
-        strokeColor: "rgba(151,187,205,1)",
-        pointColor: "rgba(151,187,205,1)",
-        pointStrokeColor: "#fff",
-        pointHighlightFill: "#fff",
-        pointHighlightStroke: "rgba(151,187,205,1)",
-        data: [28, 48, 40, 19, 86]
-      }
-    ]
-  };
-  var pdata = [
-    {
-      value: 300,
-      color: "#46BFBD",
-      highlight: "#5AD3D1",
-      label: "Complete"
-    },
-    {
-      value: 50,
-      color:"#F7464A",
-      highlight: "#FF5A5E",
-      label: "In-Progress"
-    }
-  ]
-  
-  var ctxl = $("#lineChartDemo2").get(0).getContext("2d");
-  var lineChart = new Chart(ctxl).Line(data);
-  
-  var ctxp = $("#pieChartDemo2").get(0).getContext("2d");
-  var pieChart = new Chart(ctxp).Pie(pdata);
-</script>
-
+  </body>
     
 
     

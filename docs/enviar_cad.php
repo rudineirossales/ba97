@@ -260,6 +260,9 @@ $query.= "values ('$ba','$mes','$estacao','$indicador','$abertura','$promessa','
 $query2 = "update base set cadastrado = 'S' where ba = '$ba'";
 
 
+$query3 = "update base set prioridade = '97' where prioridade = '98'";
+
+
 
 
 
@@ -275,6 +278,7 @@ $query2 = "update base set cadastrado = 'S' where ba = '$ba'";
 
 $sql = mysql_query($query);
 $sql2 = mysql_query($query2);
+$sql3 = mysql_query($query3);
 
 
 if($sql && $sql)

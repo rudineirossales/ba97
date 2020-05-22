@@ -133,9 +133,19 @@ $data = $_POST['date'];
 $data2 = $_POST['date2'];
 
       
+if ($_SESSION['acesso'] == 'ADM')
+{
+  $sql = mysql_query ("select * from cadastro where validacao = 'R'" );
+}
+else
 
+{
+
+  $sql = mysql_query ("select * from cadastro where validacao = 'R' and ga = '".$_SESSION['id']."' " );
+
+}
       
-    $sql = mysql_query ("select * from cadastro where validacao = 'R'  " );
+  
 
       
     $row = mysql_num_rows($sql);
@@ -159,7 +169,7 @@ $data2 = $_POST['date2'];
 
                   <tr>
                   
-                    <td><?php echo $dado ["ba"];  ?></td>
+                  <td><a href='editar.php?ba=<?php echo $dado ["ba"] ?>' ><?php echo $dado ["ba"];  ?></a></td>
                     
                     
                     

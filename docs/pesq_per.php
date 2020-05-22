@@ -231,12 +231,49 @@ function fnExcelReport() {
                 <thead>
                   <tr>
                     <th>Ba</th>
+                    <th>Mes</th>
                     <th>Estacao</th>
+                    <th>validação</th>
+                    <th>indicador</th>
+                    <th>abertura</th>
+                    <th>promessa</th>
+                    <th>acionamento</th>
+                    <th>baixa</th>
+                    <th>sla</th>
+                    <th>cod</th>
+                    <th>cabo</th>
+                    <th>entre localidade</th>
                     <th>Ma</th>
-                    <th>Abertura</th>
-                    <th>Baixa</th>
-                    <th>Cadastro</th>
-                    <th>Ga</th>
+                    <th>tipo</th>
+                    <th>cauda</th>
+                    <th>sub causa</th>
+                    <th>usu cabo</th>
+                    <th>ba comum</th>
+                    <th>prazo</th>
+                    <th>metro cabo</th>
+                    <th>lote cabo</th>
+                    <th>sap</th>
+                    <th>cgr</th>
+                    <th>prot bo</th>
+                    <th>obs nao abertura</th>
+                    <th>remanejo</th>
+                    <th>cx usada</th>
+                    <th>emenda enpe</th>
+                    <th>endereço enpe</th>
+                    <th>pend 35d</th>
+                    <th>jm</th>
+                    <th>n° jm</th>
+                    <th>data abertura</th>
+                    <th>previsao regularização</th>
+                    <th>just. fora prazo</th>
+                    <th>ccto cliente</th>
+                    <th>descrição</th>
+                    <th>coord. cabo</th>
+                    <th>coord. enpe</th>
+                    <th>pendência</th>
+                    <th>material 35d</th>
+                    <th>ga</th>
+                    <th>ocorrencia</th>
                     <th>PDF</th>
                     
                     
@@ -254,11 +291,11 @@ $data2 = $_POST['date2'];
 if ($_SESSION['acesso'] == 'ADM')
 {
 
-$sql = mysql_query ("select * from cadastro where data_cad   BETWEEN '$data' and '$data2' and validacao = 'OK' order by data_cad desc" );
+$sql = mysql_query ("select * from cadastro where baixa   BETWEEN '$data' and '$data2' and validacao = 'OK' order by data_cad desc" );
 }
 else
 {
-    $sql = mysql_query ("select * from cadastro where data_cad   BETWEEN '$data' and '$data2'  and validacao = 'OK' order by data_cad desc" );
+    $sql = mysql_query ("select * from cadastro where baixa BETWEEN '$data' and '$data2'  and validacao = 'OK' order by data_cad desc" );
 
 }
 
@@ -284,12 +321,51 @@ else
                   <tr>
                     
                     <td><?php echo $dado ["ba"];  ?></td>
+                    <td><?php echo $dado ["mes"];  ?></td>
                     <td><?php echo $dado ["estacao"];  ?></td>
-                    <td><?php echo $dado ["ma"];  ?></td>
+                    <td><?php echo $dado ["validacao"];  ?></td>
+                    <td><?php echo $dado ["indicador"];  ?></td>
                     <td><?php echo $dado ["abertura"];  ?></td>
+                    <td><?php echo $dado ["promessa"];  ?></td>
+                    <td><?php echo $dado ["acionamento"];  ?></td>
                     <td><?php echo $dado ["baixa"];  ?></td>
-                    <td><?php echo $dado ["data_cad"];  ?></td>
+                    <td><?php echo $dado ["sla"];  ?></td>
+                    <td><?php echo $dado ["cod"];  ?></td>
+                    <td><?php echo $dado ["nome_cabo"];  ?></td>
+                    <td><?php echo $dado ["entre_local"];  ?></td>
+                    <td><?php echo $dado ["ma"];  ?></td>
+                    <td><?php echo $dado ["tipo_utilizacao"];  ?></td>
+                    <td><?php echo $dado ["causa_rompimento"];  ?></td>
+                    <td><?php echo $dado ["sub_causa"];  ?></td>
+                    <td><?php echo $dado ["usu_cabo"];  ?></td>
+                    <td><?php echo $dado ["ba_comum"];  ?></td>
+                    <td><?php echo $dado ["prazo"];  ?></td>
+                    <td><?php echo $dado ["metro_cabo"];  ?></td>
+                    <td><?php echo $dado ["lote_cabo"];  ?></td>
+                    <td><?php echo $dado ["cod_sap"];  ?></td>
+                    <td><?php echo $dado ["cgr"];  ?></td>
+                    <td><?php echo $dado ["n_prot_bo"];  ?></td>
+                    <td><?php echo $dado ["obs_nao_abertura_bo"];  ?></td>
+                    <td><?php echo $dado ["remanejo_fibra"];  ?></td>
+                    <td><?php echo $dado ["qtd_cx_usada"];  ?></td>
+                    <td><?php echo $dado ["n_emenda_enpe"];  ?></td>
+                    <td><?php echo $dado ["endereco_enpe"];  ?></td>
+                    <td><?php echo $dado ["pendencia_35d"];  ?></td>
+                    <td><?php echo $dado ["jm"];  ?></td>
+                    <td><?php echo $dado ["n_jm"];  ?></td>
+                    <td><?php echo $dado ["data_abert_jan"];  ?></td>
+                    <td><?php echo $dado ["prev_regula"];  ?></td>
+                    <td><?php echo $dado ["just_fora_prazo"];  ?></td>
+                    <td><?php echo $dado ["ccto_cli"];  ?></td>
+                    <td><?php echo $dado ["descricao"];  ?></td>
+                    <td><?php echo $dado ["coord_cabo"];  ?></td>
+                    <td><?php echo $dado ["coord_enpe"];  ?></td>
+                    <td><?php echo $dado ["informe_pendencia"];  ?></td>
+                    <td><?php echo $dado ["material_35d"];  ?></td>
                     <td><?php echo $dado ["ga"];  ?></td>
+                    <td><?php echo $dado ["ocorrencia"];  ?></td>
+                    
+                    
                     <td> <a style="color:black;" href="pdf.php?ba=<?php echo $dado["ba"];?>" target="_blank"  role="button" aria-pressed="true"><i class="fa fa-file-text" aria-hidden="true"></i></a></td>
 
 
