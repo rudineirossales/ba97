@@ -642,7 +642,11 @@ $data2 = $_POST['date2'];
           
           or
           
-          nome_tec = 'WILLIAN MONTEIRO RAUTENBERG' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'");
+          nome_tec = 'WILLIAN MONTEIRO RAUTENBERG' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'
+          
+          or
+          
+          nome_tec = 'JULIO CEZAR NOVASKI DE CAMPOS' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'");
         }
 
           if  ($_SESSION['id'] == '391610') //paulo
@@ -766,7 +770,7 @@ $data2 = $_POST['date2'];
         {
            
 
-          $sql = mysql_query ("select * from base where nome_tec = 'DIOGO CARDOSO DA CRUZ' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' or nome_tec = 'DIOGO CARDOSO DA CRUZ' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '98' and cos = 'PREFO' 
+          $sql = mysql_query ("select * from base where nome_tec = 'DIOGO CARDOSO DA CRUZ' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'  
  
 
           or nome_tec = 'ROGGER EDUARD MAGANHOTTI' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
@@ -794,7 +798,7 @@ $data2 = $_POST['date2'];
           
           
           
-          or nome_tec = 'LUIZ EDUARDO PINTO COSTA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' o");
+          or nome_tec = 'LUIZ EDUARDO PINTO COSTA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'");
 
 
         }

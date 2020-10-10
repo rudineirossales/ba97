@@ -150,7 +150,94 @@
             </div>
           </div>
         </div>
-        
+
+        <div class="col-md-6">
+          <div class="tile">
+            <h3 class="tile-title">Pendência 35D Total </h3>
+            <div class="embed-responsive embed-responsive-16by9">
+              <canvas class="embed-responsive-item" id="barChartDemo3"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <?php
+
+
+          $sql = mysql_query ("select nome_cabo,count(nome_cabo) as soma from cadastro where MONTH(baixa) = MONTH(NOW())  and nome_cabo <> '' group by nome_cabo order by soma desc" );
+
+          $sql4 = mysql_query ("select nome_cabo,count(nome_cabo) as soma from cadastro where MONTH(baixa) = MONTH(NOW()) -1 and nome_cabo <> '' group by nome_cabo order by soma desc" );
+
+
+
+          $row4 = mysql_num_rows($sql4);
+          $row = mysql_num_rows($sql);
+
+
+          
+
+        ?>
+        <div class="clearfix"></div>
+        <div class="col-md-6">
+          <div class="tile">
+            <h3 class="tile-title">Cabos ofensores mês  <?php echo date("m"); ?> </h3>
+            <table class="table table-sm">
+              <thead>
+                <tr>
+                  
+                  <th>Cabo</th>
+                  <th>Total</th>
+                 
+                </tr>
+              </thead>
+              <tbody>
+                  <?php  if (mysql_num_rows($sql) > 0){ while ($dado = mysql_fetch_assoc($sql)){
+                  $dado2 = mysql_fetch_assoc($sql2); if ($dado ["soma"] >= 2){ ?>
+                <tr>
+                  
+                  <td><?php echo $dado ["nome_cabo"];  ?></td>
+                  <td><?php echo $dado ["soma"];  ?></td>
+                  
+                </tr>
+
+                <?php }}} ?> 
+               
+              </tbody>
+            </table>
+          </div>
+        </div>
+        </div>
+      </div>
+
+
+      <div class="clearfix"></div>
+        <div class="col-md-6">
+          <div class="tile">
+            <h3 class="tile-title">Cabos ofensores mês  <?php echo date("m") - 1; ?> </h3>
+            <table class="table table-sm">
+              <thead>
+                <tr>
+                  
+                  <th>Cabo</th>
+                  <th>Total</th>
+                 
+                </tr>
+              </thead>
+              <tbody>
+                  <?php  if (mysql_num_rows($sql4) > 0){ while ($dado4 = mysql_fetch_assoc($sql4)){
+                  $dado2 = mysql_fetch_assoc($sql2); if ($dado4 ["soma"] >= 2){ ?>
+                <tr>
+                  
+                  <td><?php echo $dado4 ["nome_cabo"];  ?></td>
+                  <td><?php echo $dado4 ["soma"];  ?></td>
+                  
+                </tr>
+
+                <?php }}} ?> 
+               
+              </tbody>
+            </table>
+          </div>
+        </div>
         </div>
       </div>
     </main>
@@ -178,7 +265,7 @@
       			data: [<?php echo $jan_tot ?>, <?php echo $fev_tot ?>, <?php echo $marco_tot ?>, <?php echo $abril_tot ?>, <?php echo $maio_tot ?>,<?php echo $jun_tot ?>,<?php echo $jul_tot ?>,<?php echo $agos_tot ?>,<?php echo $sete_tot ?>,<?php echo $outu_tot ?>,<?php echo $nov_tot ?>,<?php echo $dez_tot ?>]
       		},
       		{
-      			label: "My Second dataset",
+      			label: "teste",
       			fillColor: "rgba(210,105,30)",
       			strokeColor: "rgba(151,187,205,1)",
       			pointColor: "rgba(151,187,205,1)",
@@ -205,6 +292,25 @@
           }
         ]
       };
+
+      var data3 = {
+        labels: ["FELIPE", "ALDINO", "JEFERSON", "CASSIANO", "JOSE", "PAULO", "WAGNER"],
+        datasets: [
+          
+          {
+            label: "My Second dataset",
+            fillColor: "rgba(46,139,87)",
+            strokeColor: "rgba(151,187,205,1)",
+            pointColor: "rgba(151,187,205,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(151,187,205,1)",
+            data: [<?php echo $felipe_35d ?>, <?php echo $aldino_35d ?>, <?php echo $jeferson_35d ?>, <?php echo $cassiano_35d ?>, <?php echo $jose_35d ?>, <?php echo $paulo_35d ?>,<?php echo $wagner_35d ?>]
+          }
+        ]
+      };
+
+      
       var pdata = [
       	{
       		value: 300,
@@ -233,6 +339,9 @@
 
       var ctxb2 = $("#barChartDemo2").get(0).getContext("2d");
       var barChart = new Chart(ctxb2).Bar(data2);
+
+      var ctxb3 = $("#barChartDemo3").get(0).getContext("2d");
+      var barChart = new Chart(ctxb3).Bar(data3);
       
      
     </script>

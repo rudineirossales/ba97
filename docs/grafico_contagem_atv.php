@@ -104,7 +104,9 @@ or nome_tec = 'JOSEMIR ANTONIO LOPES' and cadastrado = 'N' and indicador = 'S' a
 
 or nome_tec = 'RONALDO DANIEL DA SILVA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
 
-or nome_tec = 'WILLIAN MONTEIRO RAUTENBERG' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' ;" );
+or nome_tec = 'WILLIAN MONTEIRO RAUTENBERG' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'
+
+or nome_tec = 'JULIO CEZAR NOVASKI DE CAMPOS' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'" );
 
  while ($dado = mysql_fetch_assoc($sql1 )){
 
@@ -928,6 +930,85 @@ or nome_tec = 'WILLIAM IAREK DE ANDRADE' and cadastrado = 'N' and indicador = 'S
         $dez_cad = $dado["dez_cad"];
         
        } 
+
+
+
+
+       //_______________________ GRÁFICO 35D ______________________________________________________-
+
+       $sql1 = mysql_query ("select count(*) as jose_35d from  cadastro where pendencia_35d = 'Sim' and ga = '287474'");
+
+
+       while ($dado = mysql_fetch_assoc($sql1)){
+      
+      
+          $jose_35d = $dado["jose_35d"];
+          
+         } 
+
+         $sql1 = mysql_query ("select count(*) as felipe_35d from  cadastro where pendencia_35d = 'Sim' and ga = '391581'");
+
+
+       while ($dado = mysql_fetch_assoc($sql1)){
+      
+      
+          $felipe_35d = $dado["felipe_35d"];
+          
+         } 
+
+         $sql1 = mysql_query ("select count(*) as aldino_35d from  cadastro where pendencia_35d = 'Sim' and ga = '383304'");
+
+
+       while ($dado = mysql_fetch_assoc($sql1)){
+      
+      
+          $aldino_35d = $dado["aldino_35d"];
+          
+         } 
+
+
+         $sql1 = mysql_query ("select count(*) as jeferson_35d from  cadastro where pendencia_35d = 'Sim' and ga = '390630'");
+
+
+       while ($dado = mysql_fetch_assoc($sql1)){
+      
+      
+          $jeferson_35d = $dado["jeferson_35d"];
+          
+         } 
+
+
+         $sql1 = mysql_query ("select count(*) as cassiano_35d from  cadastro where pendencia_35d = 'Sim' and ga = '389739'");
+
+
+         while ($dado = mysql_fetch_assoc($sql1)){
+        
+        
+            $cassiano_35d = $dado["cassiano_35d"];
+            
+           } 
+
+
+           $sql1 = mysql_query ("select count(*) as paulo_35d from  cadastro where pendencia_35d = 'Sim' and ga = '391610'");
+
+
+           while ($dado = mysql_fetch_assoc($sql1)){
+          
+          
+              $paulo_35d = $dado["paulo_35d"];
+              
+             } 
+
+
+             $sql1 = mysql_query ("select count(*) as wagner_35d from  cadastro where pendencia_35d = 'Sim' and ga = '380636'");
+
+
+           while ($dado = mysql_fetch_assoc($sql1)){
+          
+          
+              $wagner_35d = $dado["wagner_35d"];
+              
+             }
 
 
 ?>

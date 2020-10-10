@@ -104,6 +104,7 @@
                 <thead>
                   <tr>
                     <th>Ba</th>
+                    <th>Ga</th>
                     
                     <th>Mes</th>
                     <th>Estação</th>
@@ -113,8 +114,10 @@
                     <th>Promessa</th>
                     <th>Acionamento</th>
                     <th>Baixa</th>
+                    <th>Dias em aberto</th>
                     <th>Sla</th>
                     <th>Cod</th>
+                    
                   </tr>
                 </thead>
 
@@ -135,7 +138,7 @@ if ($_SESSION['acesso'] == 'ADM')
 
 else
 {
-    $sql = mysql_query ("select * from cadastro where pendencia_35d = 'SIM'  and validacao = 'OK' " );
+    $sql = mysql_query ("select * from cadastro where pendencia_35d = 'SIM'  and validacao = 'OK' and ga ='".$_SESSION['id']."'" );
     
 }
  
@@ -146,8 +149,14 @@ $row = mysql_num_rows($sql);
       while ($dado = mysql_fetch_assoc($sql))
       
         {
-     
-      
+          
+          $data_inicial = $dado ["abertura"];
+          $data_final = date('Y-m-d');
+          $diferenca = strtotime($data_final) - strtotime($data_inicial);
+          $dias = floor($diferenca / (60 * 60 * 24));
+
+
+          
 
 ?>
                 <tbody>
@@ -157,6 +166,7 @@ $row = mysql_num_rows($sql);
 
                   <tr>
                     <td><a href='baixa_ped.php?ba=<?php echo $dado ["ba"] ?>' ><?php echo $dado ["ba"];  ?></a></td>
+                    <td><?php echo $dado ["nome_ga"];  ?></td>
                     
                     <td><?php echo $dado ["mes"];  ?></td>
                     <td><?php echo $dado ["estacao"];  ?></td>
@@ -166,8 +176,10 @@ $row = mysql_num_rows($sql);
                     <td><?php echo $dado ["promessa"];  ?></td>
                     <td><?php echo $dado ["acionamento"];  ?></td>
                     <td><?php echo $dado ["baixa"];  ?></td>
+                    <td><?php echo $dias." dias";  ?></td>
                     <td><?php echo $dado ["sla"];  ?></td>
                     <td><?php echo $dado ["cod"];  ?></td>
+                    
                   </tr>
       <?php 
                       
