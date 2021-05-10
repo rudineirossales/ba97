@@ -4,116 +4,6 @@
 <?php
 
 
-//-------------------------------------------  CONTAGEM BASE CADASTRO FELIPE  -------------------------
-
-$sql1 = mysql_query ("select count(nome_tec) as felipe from base where nome_tec = 'ADILSON SIQUEIRA GOMES' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
- 
-
-or nome_tec = 'WELLINTON MARCELO ROBERTO TONKONOH' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'  
-
-
-
-or nome_tec = 'CLEVERSON DE JESUS PRENSAK' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
-
-
-
-
-or nome_tec = 'SAOLO FRANCO ASSUNCAO' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
-
-
-
-or nome_tec = 'LUIZ CARLOS RADUNZ' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
-
-
-
-or nome_tec = 'IRINEU DE LUCA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
-
-
-
-or nome_tec = 'BRYAN IVES FERREIRA MALVERDEL' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
-
-
-
-or nome_tec = 'PAULO ROBERTO DA ROCHA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
-
-
-
-or nome_tec = 'ALISSON BIBIANO DA SILVA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
-
-
-
-
-or nome_tec = 'JORGE LUIZ DE OLIVEIRA CARVALHO' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
-
-
-
-
-
-or nome_tec = 'JORGE LUIZ DE OLIVEIRA CARVALHO' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
-
-
-
-
-or nome_tec = 'IGOR SAMUEL KLOSS' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
-
-
-
-or nome_tec = 'ALEXANDRE MARTINS DOS SANTOS' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
-
-
-
-
-or nome_tec = 'SILVIO CESAR DOMINGOS' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'
-
-
-
-or nome_tec = 'GISALDO ANGELO MONTEIRO' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
-
-
-
-or nome_tec = 'VITOR HUGO XAVIER DA ROSA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
-
-
-
-
-or nome_tec = 'REGIS CRISTOFFER CUBAS' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
-
-
-
-
-or nome_tec = 'AGUINALDO DE LIMA DA SILVA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
-
-
-
-or nome_tec = 'ELIAS COELHO' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
-
-
-
-or nome_tec = 'JOSE LEANDRO PINTO' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
-
-
-
-
-or nome_tec = 'ALESSANDRO NICODEMOS' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
-
-
-
-
-or nome_tec = 'JOSEMIR ANTONIO LOPES' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
-
-
-or nome_tec = 'RONALDO DANIEL DA SILVA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
-
-or nome_tec = 'WILLIAN MONTEIRO RAUTENBERG' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'
-
-or nome_tec = 'JULIO CEZAR NOVASKI DE CAMPOS' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'" );
-
- while ($dado = mysql_fetch_assoc($sql1 )){
-
-
-  $felipe = $dado["felipe"];
-  
- } 
 
  
 
@@ -128,6 +18,10 @@ nome_tec = 'CHAILEM PIRES GOMEZ DA COSTA' and cadastrado = 'N' and indicador = '
 or
 
 nome_tec = 'ROMOALDO VITOR BRUNETTO' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+or
+
+nome_tec = 'LUPERCIO DOS SANTOS JUNIOR' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'
 
 
 
@@ -169,7 +63,7 @@ nome_tec = 'JOSE EDUILIO TABORDA MIRANDA' and cadastrado = 'N' and indicador = '
 
 or
 
-nome_tec = 'ANTONIO MARCOS STUNPF' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+nome_tec = 'ANTONIO MARCOS STUNPF 84041885' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
 
 or
 
@@ -301,6 +195,10 @@ $sql1 = mysql_query ("select count(nome_tec) as cassiano from base where nome_te
 or nome_tec = 'JHONATAN HENRIQUE DA SILVA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
 
 
+or nome_tec = 'MATHEUS ANDRADE MELO' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+or nome_tec = 'VALDELIRIO CASSIANO DE SOUZA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'
+
 
 or nome_tec = 'KAIQUE JUVENIR MARCONDES' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
 
@@ -358,6 +256,109 @@ or nome_tec = 'JEAN RAFAEL DA SILVA' and cadastrado = 'N' and indicador = 'S' an
 
 
 or nome_tec = 'ADRIANO DOS SANTOS BATISTA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+or nome_tec = 'WELLINTON MARCELO ROBERTO TONKONOH' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'  
+
+
+
+or nome_tec = 'CLEVERSON DE JESUS PRENSAK' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+
+
+
+or nome_tec = 'SAOLO FRANCO ASSUNCAO' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+
+
+or nome_tec = 'LUIZ CARLOS RADUNZ' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+
+
+or nome_tec = 'IRINEU DE LUCA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+
+
+or nome_tec = 'BRYAN IVES FERREIRA MALVERDEL' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+
+
+or nome_tec = 'PAULO ROBERTO DA ROCHA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+
+
+or nome_tec = 'ALISSON BIBIANO DA SILVA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+
+
+
+or nome_tec = 'JORGE LUIZ DE OLIVEIRA CARVALHO' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+
+
+
+
+or nome_tec = 'JORGE LUIZ DE OLIVEIRA CARVALHO' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+
+
+
+or nome_tec = 'IGOR SAMUEL KLOSS' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+
+
+or nome_tec = 'ALEXANDRE MARTINS DOS SANTOS' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+
+
+
+or nome_tec = 'SILVIO CESAR DOMINGOS' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'
+
+
+
+or nome_tec = 'GISALDO ANGELO MONTEIRO' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+
+
+or nome_tec = 'VITOR HUGO XAVIER DA ROSA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+
+
+
+or nome_tec = 'REGIS CRISTOFFER CUBAS' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+
+
+
+or nome_tec = 'AGUINALDO DE LIMA DA SILVA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+
+
+or nome_tec = 'ELIAS COELHO' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+
+
+or nome_tec = 'JOSE LEANDRO PINTO' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+
+
+
+or nome_tec = 'ALESSANDRO NICODEMOS' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+
+
+
+or nome_tec = 'JOSEMIR ANTONIO LOPES' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+
+or nome_tec = 'RONALDO DANIEL DA SILVA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+or nome_tec = 'WILLIAN MONTEIRO RAUTENBERG' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'
+
+or nome_tec = 'JULIO CEZAR NOVASKI DE CAMPOS' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'
+
+or nome_tec = 'ADILSON SIQUEIRA GOMES' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'
+
+
 
 
 " );
@@ -486,9 +487,9 @@ or nome_tec = 'VALDINEI JOSE GOLCALVES' and cadastrado = 'N' and indicador = 'S'
 
 
 
- //-------------------------------------------  CONTAGEM BASE CADASTRO PAULO  -------------------------
+ //-------------------------------------------  CONTAGEM BASE CADASTRO CLEBER  -------------------------
 
-$sql1 = mysql_query ("select count(nome_tec) as paulo from base where nome_tec = 'EDERALDO DELFINO DOS SANTOS' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+$sql1 = mysql_query ("select count(nome_tec) as cleber from base where nome_tec = 'EDERALDO DELFINO DOS SANTOS' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
 
 
 
@@ -596,7 +597,7 @@ or nome_tec = 'JOAO LUIZ FELIPE DA COSTA' and cadastrado = 'N' and indicador = '
  while ($dado = mysql_fetch_assoc($sql1 )){
 
 
-  $paulo = $dado["paulo"];
+  $cleber = $dado["cleber"];
   
  } 
 
@@ -609,6 +610,8 @@ $sql1 = mysql_query ("select count(nome_tec) as wagner from base where nome_tec 
 
 
 or nome_tec = 'DORIGON RAMALHO CORREIA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+or nome_tec = 'AUREA VANESSA DA SILVA PORTELA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
 
 
 
@@ -685,6 +688,28 @@ or nome_tec = 'WILLIAM IAREK DE ANDRADE' and cadastrado = 'N' and indicador = 'S
   
  } 
 
+
+
+ //-------------------------------------------  CONTAGEM BASE CADASTRO SEREDE  -------------------------
+
+$sql1 = mysql_query ("select count(nome_tec) as serede from base where nome_tec = 'IVONE NEUJAHR PRIETSCH' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+
+
+
+or nome_tec = 'CENTRO DE INTELIGENCIA TECNICA - SEREDE' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+
+
+
+
+;" );
+ while ($dado = mysql_fetch_assoc($sql1 )){
+
+
+  $serede = $dado["serede"];
+  
+ } 
  //-------------------------------------------  CONTAGEM ANUAL  -------------------------
 
  $sql1 = mysql_query ("select count(*) as jan_tot from base where  indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' and MONTH(baixa) = '01' and year(baixa) = year(NOW()) ");
@@ -989,13 +1014,13 @@ or nome_tec = 'WILLIAM IAREK DE ANDRADE' and cadastrado = 'N' and indicador = 'S
            } 
 
 
-           $sql1 = mysql_query ("select count(*) as paulo_35d from  cadastro where pendencia_35d = 'Sim' and ga = '391610'");
+           $sql1 = mysql_query ("select count(*) as cleber_35d from  cadastro where pendencia_35d = 'Sim' and ga = '391434'");
 
 
            while ($dado = mysql_fetch_assoc($sql1)){
           
           
-              $paulo_35d = $dado["paulo_35d"];
+              $cleber_35d = $dado["cleber_35d"];
               
              } 
 

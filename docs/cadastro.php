@@ -315,7 +315,7 @@ con_consulta.send(null);
                   <div class="form-group">
                     <label for="exampleSelect1">Nome N° cabo</label>
                    
-                    <input type="text" class="form-control" id="cabo" name="cabo" onblur="completar_campos();"  >
+                    <input type="text" class="form-control" id="cabo" name="cabo" required onblur="completar_campos();"  >
                     <img src="img/loading.gif" id="loading" style="display:none " />
                   </div>
                   <div id="principal" >
@@ -325,7 +325,7 @@ con_consulta.send(null);
                   
                   
                   <div class="form-group">
-                    <label for="exampleSelect1">Tipo utilização</label>
+                    <label for="exampleSelect1">Tipo utilização.</label>
                     <select class="form-control" id="exampleSelect1" name="tipo">
                           <option value="Aereo"  >Aereo</option>
                           <option value="Diretamente Enterrado"  >Diretamente Enterrado</option>
@@ -335,7 +335,7 @@ con_consulta.send(null);
                   </div>
                   <div class="form-group">
                     <label for="exampleSelect1">Causa rompimento</label>
-                    <select class="form-control" id="exampleSelect1" name="causa">
+                    <select class="form-control" id="exampleSelect1" name="causa" required>
                     <option value="0" disabled="disabled"  >Escolha uma Causa</option>
 
                           <?php
@@ -353,7 +353,7 @@ con_consulta.send(null);
                   </div>
                   <div class="form-group">
                     <label for="exampleSelect1">Sub causa</label>
-                    <select class="form-control" id="exampleSelect1" name="sub">
+                    <select class="form-control" id="exampleSelect1" name="sub" required >
                     <option value="0" disabled="disabled" >Escolha uma subcausa</option>
                     </select>
                   </div>

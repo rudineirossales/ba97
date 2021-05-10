@@ -45,7 +45,10 @@ function import($file)
       
       
       $q = "insert into base (uf,localidade,estacao,central,ba,area_tec,cos,cos_origem,cod_fabricante,prioridade,cod_ocorrencia,cod_ocorrencia_ac,abertura,ini_anormalidade,acionamento,ence_acio,micro_area,numero_ac,nome_tec,mat_tec,natureza_atv,ramificacao,fonte_info,assinantes,promessa,baixa,doc_associado,cod,desc_alarme,cod_ence,desc_reclamacao,mntfo,cod_info,info_complementar,cod_atv,nome_contato,tel_contato,numero_tel,n_tres,ultimo_aciona,backbone,sla,sla_2016,primeiro_fo,psr,encerrado_fo,tecnica_cos,regiao,proximo_aciona,prazo_psr,prazo_psr_2016,tempo_fibra,indicador,tec_ence,possivel_desvio,expurgo,prazo_35d,tempo_fibra_seg,mes,flag,ftth,cadastrado) values(". $value2 .")";
-      if ( $this->query($q) ) 
+
+      $q2 = "insert into expurgo (uf,localidade,estacao,central,ba,area_tec,cos,cos_origem,cod_fabricante,prioridade,cod_ocorrencia,cod_ocorrencia_ac,abertura,ini_anormalidade,acionamento,ence_acio,micro_area,numero_ac,nome_tec,mat_tec,natureza_atv,ramificacao,fonte_info,assinantes,promessa,baixa,doc_associado,cod,desc_alarme,cod_ence,desc_reclamacao,mntfo,cod_info,info_complementar,cod_atv,nome_contato,tel_contato,numero_tel,n_tres,ultimo_aciona,backbone,sla,sla_2016,primeiro_fo,psr,encerrado_fo,tecnica_cos,regiao,proximo_aciona,prazo_psr,prazo_psr_2016,tempo_fibra,indicador,tec_ence,possivel_desvio,expurgo,prazo_35d,tempo_fibra_seg,mes,flag,ftth,cadastrado) values(". $value2 .")";
+
+      if ( $this->query($q) and  $this->query($q2) ) 
       {
 
               $this->state_csv = true;
@@ -81,5 +84,10 @@ function import($file)
    echo "<pre> Arquivos duplicados $contador2 <br></pre>";
 }
 }
+
+
+
+
+
 
 ?> 

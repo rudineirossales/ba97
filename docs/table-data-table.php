@@ -257,6 +257,9 @@ $data2 = $_POST['date2'];
 
 
           or nome_tec = 'DORIGON RAMALHO CORREIA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+
+          or nome_tec = 'AUREA VANESSA DA SILVA PORTELA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'
           
           
           
@@ -342,6 +345,10 @@ $data2 = $_POST['date2'];
           or
           
           nome_tec = 'ROMOALDO VITOR BRUNETTO' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+          or
+          
+          nome_tec = 'LUPERCIO DOS SANTOS JUNIOR' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
           
           
           
@@ -383,7 +390,7 @@ $data2 = $_POST['date2'];
           
           or
           
-          nome_tec = 'ANTONIO MARCOS STUNPF' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+          nome_tec = 'ANTONIO MARCOS STUNPF 84041885' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
           
           or
           
@@ -483,6 +490,10 @@ $data2 = $_POST['date2'];
           
           
           or nome_tec = 'ALISSON FELIPE FARIA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+          or nome_tec = 'MATHEUS ANDRADE MELO' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'
+
+          or nome_tec = 'VALDELIRIO CASSIANO DE SOUZA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'
           
           
           
@@ -531,15 +542,10 @@ $data2 = $_POST['date2'];
           
           
           
-          or nome_tec = 'ADRIANO DOS SANTOS BATISTA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' ");
+          or nome_tec = 'ADRIANO DOS SANTOS BATISTA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+          
 
-        }
-
-
-        if($_SESSION['id'] == '391581') //felipe
-        {
-         
-          $sql = mysql_query ("select * from base where nome_tec = 'ADILSON SIQUEIRA GOMES' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'  
+          or nome_tec = 'ADILSON SIQUEIRA GOMES' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'  
  
 
           or nome_tec = 'WELLINTON MARCELO ROBERTO TONKONOH' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' or nome_tec = 'WELLINTON MARCELO ROBERTO TONKONOH' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '98' and cos = 'PREFO'
@@ -646,10 +652,17 @@ $data2 = $_POST['date2'];
           
           or
           
-          nome_tec = 'JULIO CEZAR NOVASKI DE CAMPOS' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'");
+          nome_tec = 'JULIO CEZAR NOVASKI DE CAMPOS' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'
+          
+          
+          ");
+
         }
 
-          if  ($_SESSION['id'] == '391610') //paulo
+
+        
+
+          if  ($_SESSION['id'] == '401026') //cleber
         {
          
           $sql = mysql_query ("select * from base where nome_tec = 'EDERALDO DELFINO DOS SANTOS' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
@@ -753,6 +766,11 @@ $data2 = $_POST['date2'];
           nome_tec = 'JOAO LUIZ FELIPE DA COSTA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
 
 
+          or
+          
+          nome_tec = 'LUPERCIO DOS SANTOS JUNIOR' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+
+
           
 
           
@@ -799,6 +817,23 @@ $data2 = $_POST['date2'];
           
           
           or nome_tec = 'LUIZ EDUARDO PINTO COSTA' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'");
+
+
+        }
+
+
+        if($_SESSION['id'] == '0') //SEREDE
+        {
+           
+
+          $sql = mysql_query ("select * from base where nome_tec = 'CENTRO DE INTELIGENCIA TECNICA - SEREDE' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO'  
+ 
+
+          or nome_tec = 'IVONE NEUJAHR PRIETSCH' and cadastrado = 'N' and indicador = 'S' and expurgo = 'N' and  prioridade = '97' and cos = 'PREFO' 
+          
+          
+          
+         ");
 
 
         }

@@ -60,7 +60,8 @@
             $coord_enpe = $dado["coord_enpe"];
             $informe_pendencia = $dado["informe_pendencia"];
             $material_35d = $dado["material_35d"];
-            $material_35d = $dado["material_35d"];
+            $cabo = $dado["nome_cabo"];
+            $entre_local = $dado["entre_local"];
 
             
             
@@ -284,7 +285,7 @@ con_consulta.send(null);
     <main class="app-content">
       <div class="app-title">
         <div>
-          <h1><i class="fa fa-edit"></i> Registro BA97</h1>
+          <h1><i class="fa fa-edit"></i> Registro BA97.</h1>
           <p></p>
         </div>
         <ul class="app-breadcrumb breadcrumb">
@@ -338,15 +339,16 @@ con_consulta.send(null);
                     <input class="form-control" readonly value="<?php echo $sla;?>" name="sla" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" >
                   </div>
                   
-                  <!--
+                  
                   <div class="form-group">
                     <label for="exampleSelect1">Nome N° cabo</label>
                    
-                    <input type="text" class="form-control" id="cabo" name="cabo" onblur="completar_campos();"  required>
+                    <input type="text" class="form-control"  id="cabo" name="cabo" onblur="completar_campos();"  required>
                     <img src="img/loading.gif" id="loading" style="display:none " />
                   </div>
                   <div id="principal" >
-                  </div>  -->
+                  
+                  </div>  <br>
 
                   
                   

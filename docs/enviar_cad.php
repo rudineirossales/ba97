@@ -257,7 +257,7 @@ $query = "insert into cadastro (ba,mes,estacao,indicador,abertura,promessa,acion
 $query.= "values ('$ba','$mes','$estacao','$indicador','$abertura','$promessa','$acionamento','$baixa','$sla','$cabo','$entre_local','$tipo','$causa','$sub','$usou','$ba_causa','$prazo','$metro_cabo','$lote_cabo','$sap','$cgr','$prot_bo','$obs_bo','$remanejo','$qtd_cx','$n_enpe','$end_enpe','$pend_35d','$jm','$n_jm','$data_aber','$prev_reg','$justi','$cctos','$desc','$coord_cabo','$coord_enpe','$pendencia','$mat_35d','$novo_nome2','$novo_nome',NOW(),'".$_SESSION['id']."', 'P','$ocorrencia','".$_SESSION['nome']."')";
 
 
-$query2 = "update base set cadastrado = 'S' where ba = '$ba'";
+
 
 
 $query3 = "update base set prioridade = '97' where prioridade = '98'";
@@ -277,13 +277,17 @@ $query3 = "update base set prioridade = '97' where prioridade = '98'";
 
 
 $sql = mysql_query($query);
-$sql2 = mysql_query($query2);
+
 $sql3 = mysql_query($query3);
 
 
-if($sql && $sql)
+if($sql)
 {
   
+  $query2 = "update base set cadastrado = 'S' where ba = '$ba'";
+
+  $sql2 = mysql_query($query2);
+
   
   echo "
   <script language='JavaScript'>

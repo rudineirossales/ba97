@@ -22,7 +22,7 @@ echo
     
     <div class="form-group" name="teste" id="teste" >
      <label for="pwd">ENTRE LOCALIDADES:</label>
-      <input type="text" class="form-control" id="entre_local" name="entre_local" value="" required  readonly>
+      <input type="text" class="form-control" id="entre_local" name="entre_local"  required  >
       
   </div>
    </div>
@@ -45,7 +45,7 @@ else  {
     <br>
     <div class="form-group" name="teste" id="teste" >
      <label for="pwd">ENTRE LOCALIDADES:</label>
-      <input type="text" class="form-control" id="entre_local" name="entre_local" value="'.$lin_dado_cli['trecho'].'" required readonly>
+      <input type="text" class="form-control" id="entre_local" name="entre_local" value="'.$lin_dado_cli['trecho'].'" required readonly >
 
     </div>
        </div>

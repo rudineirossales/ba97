@@ -252,21 +252,21 @@ move_uploaded_file($_FILES['foto'] ['tmp_name'], $diretorio.$novo_nome3 )	;
 */
 if($tamanho1 > 0) 
 {
-  $query = "update cadastro set    tipo_utilizacao = '$tipo', causa_rompimento = '$causa', sub_causa = '$sub', usu_cabo = '$usou', ba_comum = '$ba_causa', prazo = '$prazo', metro_cabo = '$metro_cabo', lote_cabo =  '$lote_cabo', cod_sap = '$sap', cgr = '$cgr',
+  $query = "update cadastro set    nome_cabo = '$cabo', entre_local = '$entre_local', tipo_utilizacao = '$tipo', causa_rompimento = '$causa', sub_causa = '$sub', usu_cabo = '$usou', ba_comum = '$ba_causa', prazo = '$prazo', metro_cabo = '$metro_cabo', lote_cabo =  '$lote_cabo', cod_sap = '$sap', cgr = '$cgr',
   n_prot_bo = '$prot_bo',obs_nao_abertura_bo = '$obs_bo',remanejo_fibra = '$remanejo', qtd_cx_usada =  '$qtd_cx',n_emenda_enpe = '$n_enpe',endereco_enpe = '$end_enpe',pendencia_35d = '$pend_35d',jm = '$jm', n_jm = '$n_jm', data_abert_jan = '$data_aber',prev_regula = '$prev_reg',just_fora_prazo = '$justi',ccto_cli = '$cctos', descricao = '$desc', coord_cabo = '$coord_cabo',coord_enpe = '$coord_enpe',informe_pendencia = '$pendencia',material_35d = '$mat_35d',foto = '$novo_nome',ga = '".$_SESSION['id']."',validacao = 'P' where ba = '$ba'";
 
 }
 else if($tamanho2 > 0) 
 {
 
-  $query = "update cadastro set    tipo_utilizacao = '$tipo', causa_rompimento = '$causa', sub_causa = '$sub', usu_cabo = '$usou', ba_comum = '$ba_causa', prazo = '$prazo', metro_cabo = '$metro_cabo', lote_cabo =  '$lote_cabo', cod_sap = '$sap', cgr = '$cgr',
+  $query = "update cadastro set   nome_cabo = '$cabo', entre_local = '$entre_local', tipo_utilizacao = '$tipo', causa_rompimento = '$causa', sub_causa = '$sub', usu_cabo = '$usou', ba_comum = '$ba_causa', prazo = '$prazo', metro_cabo = '$metro_cabo', lote_cabo =  '$lote_cabo', cod_sap = '$sap', cgr = '$cgr',
   n_prot_bo = '$prot_bo',obs_nao_abertura_bo = '$obs_bo',remanejo_fibra = '$remanejo', qtd_cx_usada =  '$qtd_cx',n_emenda_enpe = '$n_enpe',endereco_enpe = '$end_enpe',pendencia_35d = '$pend_35d',jm = '$jm', n_jm = '$n_jm', data_abert_jan = '$data_aber',prev_regula = '$prev_reg',just_fora_prazo = '$justi',ccto_cli = '$cctos', descricao = '$desc', coord_cabo = '$coord_cabo',coord_enpe = '$coord_enpe',informe_pendencia = '$pendencia',material_35d = '$mat_35d', croqui = '$novo_nome2',ga = '".$_SESSION['id']."',validacao = 'P' where ba = '$ba'";
 
 }
 
 else if($tamanho1  <= 0 && $tamanho2 <= 0  ) 
 {
-  $query = "update cadastro set    tipo_utilizacao = '$tipo', causa_rompimento = '$causa', sub_causa = '$sub', usu_cabo = '$usou', ba_comum = '$ba_causa', prazo = '$prazo', metro_cabo = '$metro_cabo', lote_cabo =  '$lote_cabo', cod_sap = '$sap', cgr = '$cgr',
+  $query = "update cadastro set    nome_cabo = '$cabo', entre_local = '$entre_local', tipo_utilizacao = '$tipo', causa_rompimento = '$causa', sub_causa = '$sub', usu_cabo = '$usou', ba_comum = '$ba_causa', prazo = '$prazo', metro_cabo = '$metro_cabo', lote_cabo =  '$lote_cabo', cod_sap = '$sap', cgr = '$cgr',
   n_prot_bo = '$prot_bo',obs_nao_abertura_bo = '$obs_bo',remanejo_fibra = '$remanejo', qtd_cx_usada =  '$qtd_cx',n_emenda_enpe = '$n_enpe',endereco_enpe = '$end_enpe',pendencia_35d = '$pend_35d',jm = '$jm', n_jm = '$n_jm', data_abert_jan = '$data_aber',prev_regula = '$prev_reg',just_fora_prazo = '$justi',ccto_cli = '$cctos', descricao = '$desc', coord_cabo = '$coord_cabo',coord_enpe = '$coord_enpe',informe_pendencia = '$pendencia',material_35d = '$mat_35d', ga = '".$_SESSION['id']."',validacao = 'P' where ba = '$ba'";
 
 }
@@ -275,7 +275,7 @@ else
 {
 
 
-$query = "update cadastro set    tipo_utilizacao = '$tipo', causa_rompimento = '$causa', sub_causa = '$sub', usu_cabo = '$usou', ba_comum = '$ba_causa', prazo = '$prazo', metro_cabo = '$metro_cabo', lote_cabo =  '$lote_cabo', cod_sap = '$sap', cgr = '$cgr',
+$query = "update cadastro set    nome_cabo = '$cabo', entre_local = '$entre_local', tipo_utilizacao = '$tipo', causa_rompimento = '$causa', sub_causa = '$sub', usu_cabo = '$usou', ba_comum = '$ba_causa', prazo = '$prazo', metro_cabo = '$metro_cabo', lote_cabo =  '$lote_cabo', cod_sap = '$sap', cgr = '$cgr',
 n_prot_bo = '$prot_bo',obs_nao_abertura_bo = '$obs_bo',remanejo_fibra = '$remanejo', qtd_cx_usada =  '$qtd_cx',n_emenda_enpe = '$n_enpe',endereco_enpe = '$end_enpe',pendencia_35d = '$pend_35d',jm = '$jm', n_jm = '$n_jm', data_abert_jan = '$data_aber',prev_regula = '$prev_reg',just_fora_prazo = '$justi',ccto_cli = '$cctos', descricao = '$desc', coord_cabo = '$coord_cabo',coord_enpe = '$coord_enpe',informe_pendencia = '$pendencia',material_35d = '$mat_35d', croqui = '$novo_nome2',foto = '$novo_nome',ga = '".$_SESSION['id']."',validacao = 'P' where ba = '$ba'";
 
 }

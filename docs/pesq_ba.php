@@ -143,86 +143,11 @@ function fnExcelReport() {
           <div class="tile">
           
             <div class="table-responsive">
-            <form class="form-inline" role="form"   method="POST" action="pesq_per.php" style="margin-left:10%;">
-    <div class="form-group">
-   
-
-    </div>
-     
-    <!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
-<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
-
-<!--Font Awesome (added because you use icons in your prepend/append)-->
-<link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
-
-<!-- Inline CSS based on choices in "Settings" tab -->
-<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;} </style>
-
-<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
-<div style="float:left;" class="bootstrap-iso">
-  
-  <div class="row">
-   <label  for="data">
-      Período
-      </label>
-    
-     <div class="form-group ">
-      
-      <div class="col-sm-10">
-       <div class="input-group">
-        <div class="input-group-addon">
-         <i class="fa fa-calendar">
-         </i>
-        </div>
-        <input class="form-control" autocomplete="off" id="date" name="date" placeholder="DE" type="text" required/>
-        <input class="form-control"  autocomplete="off" id="date2" name="date2" placeholder="ATÉ" type="text" required/>
-       </div>
-      </div>
-     </div>
-    
-  
-   
-  </div>
-
-</div>
-
-
-<!-- Extra JavaScript/CSS added manually in "Settings" tab -->
-<!-- Include jQuery -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="jquery-1.11.3.js"></script>
-
-<!-- Include Date Range Picker -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-
-<link rel="stylesheet" href="bootstrap-datepicker3.css"/>
-<script type="text/javascript" src="bootstrap-datepicker.min.js"></script>
-
-<script>
- $(document).ready(function(){
-  var date_input=$('input[name="date"]'); //our date input has the name "date"
-  var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-  date_input.datepicker({
-   format: 'yyyy-mm-dd',
-   container: container,
-   todayHighlight: true,
-   autoclose: true,
-  })
- })
-</script>
-<script>
- $(document).ready(function(){
-  var date_input=$('input[name="date2"]'); //our date input has the name "date"
-  var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
-  date_input.datepicker({
-   format: 'yyyy-mm-dd',
-   container: container,
-   todayHighlight: true,
-   autoclose: true,
-  })
- })
-</script>
+            <form class="form-inline" role="form"   method="POST" action="pesq_ba.php" style="margin-left:10%;">
+            <div class="form-group">
+                <label for="email">BA:</label>
+                <input type="text" class="form-control"  name="ba"  required >
+                </div>
 
     
     <button type="submit"  name="submit" id="submit" class="btn btn-default">Busca</button> <br><br><br><br>
@@ -285,17 +210,17 @@ function fnExcelReport() {
   {
   
 
-$data = $_POST['date'];
-$data2 = $_POST['date2'];
+$ba = $_POST['ba'];
+
 
 if ($_SESSION['acesso'] == 'ADM')
 {
 
-$sql = mysql_query ("select * from cadastro where baixa   BETWEEN '$data' and '$data2' and validacao = 'OK' order by data_cad desc" );
+$sql = mysql_query ("select * from cadastro where ba = '$ba' order by data_cad desc" );
 }
 else
 {
-    $sql = mysql_query ("select * from cadastro where baixa BETWEEN '$data' and '$data2'  and validacao = 'OK' order by data_cad desc" );
+    $sql = mysql_query ("select * from cadastro where where ba = '$ba' order by data_cad desc" );
 
 }
 

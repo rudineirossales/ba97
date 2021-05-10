@@ -101,9 +101,14 @@
            
             <li><a class="treeview-item" href="table-data-table.php"><i class="icon fa fa-circle-o"></i> Pendências</a></li>
             <li><a class="treeview-item" href="pesq_per.php"><i class="icon fa fa-circle-o"></i> Pesquisa</a></li>
+            <li><a class="treeview-item" href="pesq_ba.php"><i class="icon fa fa-circle-o"></i> Pesquisa por BA</a></li>
             <li><a class="treeview-item" href="table-pendencias.php"><i class="icon fa fa-circle-o"></i> Pend. 35 dias</a></li>
+            <li><a class="treeview-item" href="atua.php"><i class="icon fa fa-circle-o"></i> Repasse</a></li>
+            <li><a class="treeview-item" href="deleta.php"><i class="icon fa fa-circle-o"></i> Delete</a></li>
             <?php if($_SESSION['acesso'] == 'ADM'){ ?>
             <li><a class="treeview-item" href="import2.php"><i class="icon fa fa-circle-o"></i> Upload Base</a></li>
+            
+            <li><a class="treeview-item" href="/../ftth3/docs/dashboard.php"><i class="icon fa fa-circle-o"></i> FTTH</a></li>
             <?php }?>
           </ul>
         </li>
@@ -277,7 +282,7 @@
       	]
       };
       var data2 = {
-        labels: ["FELIPE", "ALDINO", "JEFERSON", "CASSIANO", "JOSE", "PAULO", "WAGNER"],
+        labels: ["ALDINO", "JEFERSON", "CASSIANO", "JOSE", "CLEBER", "WAGNER", "SEREDE"],
         datasets: [
           
           {
@@ -288,13 +293,13 @@
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(151,187,205,1)",
-            data: [<?php echo $felipe ?>, <?php echo $aldino ?>, <?php echo $jeferson ?>, <?php echo $cassiano ?>, <?php echo $jose ?>, <?php echo $paulo ?>,<?php echo $wagner ?>]
+            data: [ <?php echo $aldino ?>, <?php echo $jeferson ?>, <?php echo $cassiano ?>, <?php echo $jose ?>, <?php echo $cleber ?>,<?php echo $wagner ?>,<?php echo $serede ?>]
           }
         ]
       };
 
       var data3 = {
-        labels: ["FELIPE", "ALDINO", "JEFERSON", "CASSIANO", "JOSE", "PAULO", "WAGNER"],
+        labels: ["ALDINO", "JEFERSON", "CASSIANO", "JOSE", "CLEBER", "WAGNER"],
         datasets: [
           
           {
@@ -305,7 +310,7 @@
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(151,187,205,1)",
-            data: [<?php echo $felipe_35d ?>, <?php echo $aldino_35d ?>, <?php echo $jeferson_35d ?>, <?php echo $cassiano_35d ?>, <?php echo $jose_35d ?>, <?php echo $paulo_35d ?>,<?php echo $wagner_35d ?>]
+            data: [<?php echo $aldino_35d ?>, <?php echo $jeferson_35d ?>, <?php echo $cassiano_35d ?>, <?php echo $jose_35d ?>, <?php echo $cleber_35d ?>,<?php echo $wagner_35d ?>]
           }
         ]
       };
