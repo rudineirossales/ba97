@@ -121,10 +121,10 @@ $causa =$_POST['causa'];
 $sub =$_POST['sub']; 
 $usou =$_POST['usou']; 
 $justi =$_POST['justi']; 
- $cctos =$_POST['cctos']; 
- $desc =$_POST['desc']; 
+$cctos =$_POST['cctos']; 
+$desc =$_POST['desc']; 
 $croqui =$_POST['croqui']; 
- $ba_causa =$_POST['ba_causa']; 
+$ba_causa =$_POST['ba_causa']; 
 $prazo =$_POST['prazo']; 
 $metro_cabo =$_POST['metro_cabo']; 
 $lote_cabo =$_POST['lote_cabo']; 
@@ -262,6 +262,8 @@ $query.= "values ('$ba','$mes','$estacao','$indicador','$abertura','$promessa','
 
 $query3 = "update base set prioridade = '97' where prioridade = '98'";
 
+$query4 = "update base set expurgo = 'N' where expurgo = 'T' and baixa >= '2021-06-01'";
+
 
 
 
@@ -279,6 +281,7 @@ $query3 = "update base set prioridade = '97' where prioridade = '98'";
 $sql = mysql_query($query);
 
 $sql3 = mysql_query($query3);
+$sql4 = mysql_query($query4);
 
 
 if($sql)

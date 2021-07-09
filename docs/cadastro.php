@@ -333,7 +333,7 @@ con_consulta.send(null);
                           <option value="Submarino"  >Submarino</option>
                     </select>
                   </div>
-                  <div class="form-group">
+                   <div class="form-group">
                     <label for="exampleSelect1">Causa rompimento</label>
                     <select class="form-control" id="exampleSelect1" name="causa" required>
                     <option value="0" disabled="disabled"  >Escolha uma Causa</option>
@@ -351,7 +351,7 @@ con_consulta.send(null);
                           ?>
                     </select>
                   </div>
-                  <div class="form-group">
+                   <div class="form-group">
                     <label for="exampleSelect1">Sub causa</label>
                     <select class="form-control" id="exampleSelect1" name="sub" required >
                     <option value="0" disabled="disabled" >Escolha uma subcausa</option>

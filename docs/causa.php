@@ -1,6 +1,6 @@
 <?php
  
-include "conn.php";
+  include "conn.php";
  
 $causa = $_POST['causa'];
  
@@ -11,10 +11,13 @@ if(mysql_num_rows($qr) == 0){
    echo  '<option value="0">'.htmlentities('Não há estacao').'</option>';
     
 }else{
+
+   
     while($ln = mysql_fetch_assoc($qr))
    {
       echo '<option value="'.$ln['sub'].'">'.$ln['sub'].'</option>';
    };
+   
 }
  
 

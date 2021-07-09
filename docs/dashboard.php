@@ -54,6 +54,7 @@
   <?php 
     }
   ?>
+  
 
     
   
@@ -168,9 +169,9 @@
         <?php
 
 
-          $sql = mysql_query ("select nome_cabo,count(nome_cabo) as soma from cadastro where MONTH(baixa) = MONTH(NOW())  and nome_cabo <> '' group by nome_cabo order by soma desc" );
+          $sql = mysql_query ("select nome_cabo,count(nome_cabo) as soma from cadastro where MONTH(baixa) = MONTH(NOW())  and YEAR(baixa) = YEAR(NOW()) and nome_cabo <> '' group by nome_cabo order by soma desc limit 7" );
 
-          $sql4 = mysql_query ("select nome_cabo,count(nome_cabo) as soma from cadastro where MONTH(baixa) = MONTH(NOW()) -1 and nome_cabo <> '' group by nome_cabo order by soma desc" );
+          $sql4 = mysql_query ("select nome_cabo,count(nome_cabo) as soma from cadastro where MONTH(baixa) = MONTH(NOW()) -1 and nome_cabo <> '' group by nome_cabo order by soma desc limit 8" );
 
 
 
@@ -211,11 +212,13 @@
           </div>
         </div>
         </div>
+
+        <iframe width="1200" height="1900" src="https://datastudio.google.com/embed/reporting/79899c50-0c53-46b8-b8db-b1e14c8c8435/page/uD1JC" frameborder="0" style="border:0" allowfullscreen></iframe>
       </div>
 
-
+      <!-- 
       <div class="clearfix"></div>
-        <div class="col-md-6">
+        <div class="col-md-12">
           <div class="tile">
             <h3 class="tile-title">Cabos ofensores mês  <?php echo date("m") - 1; ?> </h3>
             <table class="table table-sm">
@@ -228,7 +231,7 @@
                 </tr>
               </thead>
               <tbody>
-                  <?php  if (mysql_num_rows($sql4) > 0){ while ($dado4 = mysql_fetch_assoc($sql4)){
+                  <?php  /*if   (mysql_num_rows($sql4) > 0){ while ($dado4 = mysql_fetch_assoc($sql4)){
                   $dado2 = mysql_fetch_assoc($sql2); if ($dado4 ["soma"] >= 2){ ?>
                 <tr>
                   
@@ -237,13 +240,13 @@
                   
                 </tr>
 
-                <?php }}} ?> 
+                <?php }}} */ ?> 
                
               </tbody>
             </table>
           </div>
         </div>
-        </div>
+        </div>  -->
       </div>
     </main>
     <!-- Essential javascripts for application to work-->
